@@ -16,7 +16,7 @@ namespace Componentes
         public F_Principal()
         {
             InitializeComponent();
-            num = 987;
+            num = 0;
         }
 
         private void F_Principal_Load(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Componentes
         {
             if (tb_veiculos.Text == "")
             {
-                MessageBox.Show("DIGITA UM VEICULO ANIMAL (B****O PRA CARA***!");
+                MessageBox.Show("DIGITA UM VEICULO");
                 tb_veiculos.Focus();
                 return;
             }
@@ -91,6 +91,11 @@ namespace Componentes
         {
             F_comboBox a = new F_comboBox();
             a.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

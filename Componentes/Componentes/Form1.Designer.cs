@@ -122,6 +122,7 @@ namespace Componentes
             this.menuStrip1.Size = new System.Drawing.Size(288, 29);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // componentesToolStripMenuItem
             // 
@@ -137,21 +138,21 @@ namespace Componentes
             // checkBoxToolStripMenuItem
             // 
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
-            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.checkBoxToolStripMenuItem.Text = "CheckBox";
             this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
             // 
             // chckListBoxToolStripMenuItem
             // 
             this.chckListBoxToolStripMenuItem.Name = "chckListBoxToolStripMenuItem";
-            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.chckListBoxToolStripMenuItem.Text = "Chck List Box";
             this.chckListBoxToolStripMenuItem.Click += new System.EventHandler(this.chckListBoxToolStripMenuItem_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
-            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.comboBoxToolStripMenuItem.Text = "Combo Box";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
