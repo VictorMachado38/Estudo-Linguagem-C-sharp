@@ -41,6 +41,7 @@ namespace Componentes
             this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chckListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimerPickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,8 @@ namespace Componentes
             this.componentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkBoxToolStripMenuItem,
             this.chckListBoxToolStripMenuItem,
-            this.comboBoxToolStripMenuItem});
+            this.comboBoxToolStripMenuItem,
+            this.dateTimerPickerToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
@@ -155,6 +157,13 @@ namespace Componentes
             this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.comboBoxToolStripMenuItem.Text = "Combo Box";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
+            // 
+            // dateTimerPickerToolStripMenuItem
+            // 
+            this.dateTimerPickerToolStripMenuItem.Name = "dateTimerPickerToolStripMenuItem";
+            this.dateTimerPickerToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.dateTimerPickerToolStripMenuItem.Text = "Date Timer Picker";
+            this.dateTimerPickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimerPickerToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -195,6 +204,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chckListBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dateTimerPickerToolStripMenuItem;
     }
 }
 

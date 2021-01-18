@@ -97,5 +97,11 @@ namespace Componentes
         {
 
         }
+
+        private void dateTimerPickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_DateTimerPicker date = new F_DateTimerPicker();
+            date.ShowDialog();
+        }
     }
 }
