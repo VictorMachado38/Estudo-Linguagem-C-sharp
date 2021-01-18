@@ -16,7 +16,7 @@ namespace Componentes
         public F_Principal()
         {
             InitializeComponent();
-            num = 0;
+            num = 987;
         }
 
         private void F_Principal_Load(object sender, EventArgs e)
