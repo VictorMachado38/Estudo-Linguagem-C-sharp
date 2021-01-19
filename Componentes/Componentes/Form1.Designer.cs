@@ -42,6 +42,7 @@ namespace Componentes
             this.chckListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimerPickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +132,8 @@ namespace Componentes
             this.checkBoxToolStripMenuItem,
             this.chckListBoxToolStripMenuItem,
             this.comboBoxToolStripMenuItem,
-            this.dateTimerPickerToolStripMenuItem});
+            this.dateTimerPickerToolStripMenuItem,
+            this.linkLabelToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
@@ -140,21 +142,21 @@ namespace Componentes
             // checkBoxToolStripMenuItem
             // 
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
-            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.checkBoxToolStripMenuItem.Text = "CheckBox";
             this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
             // 
             // chckListBoxToolStripMenuItem
             // 
             this.chckListBoxToolStripMenuItem.Name = "chckListBoxToolStripMenuItem";
-            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.chckListBoxToolStripMenuItem.Text = "Chck List Box";
             this.chckListBoxToolStripMenuItem.Click += new System.EventHandler(this.chckListBoxToolStripMenuItem_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
-            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.comboBoxToolStripMenuItem.Text = "Combo Box";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
@@ -164,6 +166,13 @@ namespace Componentes
             this.dateTimerPickerToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.dateTimerPickerToolStripMenuItem.Text = "Date Timer Picker";
             this.dateTimerPickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimerPickerToolStripMenuItem_Click);
+            // 
+            // linkLabelToolStripMenuItem
+            // 
+            this.linkLabelToolStripMenuItem.Name = "linkLabelToolStripMenuItem";
+            this.linkLabelToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.linkLabelToolStripMenuItem.Text = "Link / Label";
+            this.linkLabelToolStripMenuItem.Click += new System.EventHandler(this.linkLabelToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -205,6 +214,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem chckListBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dateTimerPickerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linkLabelToolStripMenuItem;
     }
 }
 
