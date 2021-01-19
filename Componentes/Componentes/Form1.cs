@@ -115,5 +115,11 @@ namespace Componentes
             F_ListBox lb = new F_ListBox();
             lb.ShowDialog();
         }
+
+        private void listViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_ListView lv = new F_ListView();
+            lv.ShowDialog();
+        }
     }
 }

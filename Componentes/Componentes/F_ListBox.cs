@@ -13,6 +13,7 @@ namespace Componentes
     public partial class F_ListBox : Form
     {
         List<string> carros = new List<string>();
+        
         public F_ListBox()
         {
             InitializeComponent();
@@ -24,7 +25,11 @@ namespace Componentes
 
         }
 
-       
+        private void AtualizarListaCarror(ListBox lb, List<string> l)
+        {
+            lb.DataSource = null;
+            lb.DataSource = l;
+        }
 
         private void F_ListBox_Load(object sender, EventArgs e)
         {
@@ -44,9 +49,9 @@ namespace Componentes
                 carros.Add(tb_addCarro.Text);
                 tb_addCarro.Clear();
                 tb_addCarro.Focus();
-                lb_carros.DataSource = null;
-                lb_carros.DataSource = carros;
-                //  lb_carros.Items.Add(tb_addCarro.Text);
+                AtualizarListaCarror(lb_carros, carros);
+
+                
             }
         }
 
@@ -60,8 +65,8 @@ namespace Componentes
             try
             {
                 carros.RemoveAt(lb_carros.SelectedIndex);
-                lb_carros.DataSource = null;
-                lb_carros.DataSource = carros;
+                AtualizarListaCarror(lb_carros,carros);
+
             }
 
             catch
@@ -78,8 +83,7 @@ namespace Componentes
         private void btn_limpar_Click(object sender, EventArgs e)
         {
             carros.Clear();
-            lb_carros.DataSource = null;
-            lb_carros.DataSource = carros;
+            AtualizarListaCarror(lb_carros, carros);          
         }
     }
 }
