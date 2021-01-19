@@ -29,7 +29,7 @@ namespace Componentes
             System.Diagnostics.Process.Start("https://www.youtube.com/results?search_query=" + tb_nome.Text);
 
             LinkLabel ll = (LinkLabel)sender;
-            ll.LinkVisited = true;
+            ll.LinkVisited = false;
          
         }
 
@@ -37,7 +37,7 @@ namespace Componentes
         {
             System.Diagnostics.Process.Start("calc.exe");
             LinkLabel ll = (LinkLabel)sender;
-            ll.LinkVisited = true;
+            ll.LinkVisited = false;
         }
 
         private void ll_multiplosLinks_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
