@@ -29,19 +29,19 @@ namespace Componentes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "0",
             "Mouse",
             "120",
             "R$19,99",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Teclado",
             "20",
             "R$450,00",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Monitor",
             "38",
@@ -74,9 +74,9 @@ namespace Componentes
             this.lv_produtos.FullRowSelect = true;
             this.lv_produtos.HideSelection = false;
             this.lv_produtos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.lv_produtos.Location = new System.Drawing.Point(12, 12);
             this.lv_produtos.MultiSelect = false;
             this.lv_produtos.Name = "lv_produtos";
@@ -188,6 +188,7 @@ namespace Componentes
             this.btn_remover.TabIndex = 10;
             this.btn_remover.Text = "Remover";
             this.btn_remover.UseVisualStyleBackColor = true;
+            this.btn_remover.Click += new System.EventHandler(this.btn_remover_Click);
             // 
             // btn_obter
             // 
@@ -197,6 +198,7 @@ namespace Componentes
             this.btn_obter.TabIndex = 11;
             this.btn_obter.Text = "Obter";
             this.btn_obter.UseVisualStyleBackColor = true;
+            this.btn_obter.Click += new System.EventHandler(this.btn_obter_Click);
             // 
             // F_ListView
             // 

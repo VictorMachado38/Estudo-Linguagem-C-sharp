@@ -26,7 +26,8 @@ namespace Componentes
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
 
-            /*if (tb_id.Text == "" || tb_produto.Text == "" || tb_qtde.Text == "" || tb_preco.Text == "")
+            /*if (tb_id.Text == "" || tb_produto.Text == "" || 
+             * tb_qtde.Text == "" || tb_preco.Text == "")
             {
                 MessageBox.Show("Todos os campos tem que ser preenchidos");
             }
@@ -35,22 +36,25 @@ namespace Componentes
             {
                 MessageBox.Show("ID não pode ser vazo");
                 tb_id.Focus();
-
+                return;
             }
             if (tb_produto.Text == "")
             {
                 MessageBox.Show("Produto não pode ser vazo");
                 tb_produto.Focus();
+                return;
             }
             if (tb_qtde.Text == "")
             {
                 MessageBox.Show("Quantidade não pode ser vazo");
                 tb_qtde.Focus();
+                return;
             }
             if (tb_preco.Text == "")
             {
                 MessageBox.Show("Preço não pode ser vazo");
                 tb_preco.Focus();
+                return;
             }
            
             else 
@@ -65,6 +69,20 @@ namespace Componentes
             tb_id.Focus();
             limpar();
             }
+        }
+
+        private void btn_remover_Click(object sender, EventArgs e)
+        {
+            lv_produtos.Items.RemoveAt(lv_produtos.SelectedIndices[0]);
+        }
+
+        private void btn_obter_Click(object sender, EventArgs e)
+        {
+            tb_id.Text = lv_produtos.SelectedItems[0].SubItems[0].Text;
+            tb_produto.Text = lv_produtos.SelectedItems[0].SubItems[1].Text;
+            tb_qtde.Text = lv_produtos.SelectedItems[0].SubItems[2].Text;
+            tb_preco.Text = lv_produtos.SelectedItems[0].SubItems[3].Text;
+
         }
     }
 }
