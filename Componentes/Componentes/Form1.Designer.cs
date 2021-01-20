@@ -45,6 +45,8 @@ namespace Componentes
             this.linkLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maskedTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,7 +139,9 @@ namespace Componentes
             this.dateTimerPickerToolStripMenuItem,
             this.linkLabelToolStripMenuItem,
             this.listBoxToolStripMenuItem,
-            this.listViewToolStripMenuItem});
+            this.listViewToolStripMenuItem,
+            this.maskedTextBoxToolStripMenuItem,
+            this.monthCalendarToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
@@ -192,6 +196,20 @@ namespace Componentes
             this.listViewToolStripMenuItem.Text = "List View";
             this.listViewToolStripMenuItem.Click += new System.EventHandler(this.listViewToolStripMenuItem_Click);
             // 
+            // maskedTextBoxToolStripMenuItem
+            // 
+            this.maskedTextBoxToolStripMenuItem.Name = "maskedTextBoxToolStripMenuItem";
+            this.maskedTextBoxToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.maskedTextBoxToolStripMenuItem.Text = "Masked Text Box";
+            this.maskedTextBoxToolStripMenuItem.Click += new System.EventHandler(this.maskedTextBoxToolStripMenuItem_Click);
+            // 
+            // monthCalendarToolStripMenuItem
+            // 
+            this.monthCalendarToolStripMenuItem.Name = "monthCalendarToolStripMenuItem";
+            this.monthCalendarToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.monthCalendarToolStripMenuItem.Text = "Month Calendar";
+            this.monthCalendarToolStripMenuItem.Click += new System.EventHandler(this.monthCalendarToolStripMenuItem_Click);
+            // 
             // F_Principal
             // 
             this.ClientSize = new System.Drawing.Size(288, 508);
@@ -235,6 +253,8 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem linkLabelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem maskedTextBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthCalendarToolStripMenuItem;
     }
 }
 

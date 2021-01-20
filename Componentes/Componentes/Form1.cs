@@ -121,5 +121,17 @@ namespace Componentes
             F_ListView lv = new F_ListView();
             lv.ShowDialog();
         }
+
+        private void maskedTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_MaskedTextBox mtb = new F_MaskedTextBox();
+            mtb.ShowDialog();
+        }
+
+        private void monthCalendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_MonthCalendar mc = new F_MonthCalendar();
+            mc.ShowDialog();
+        }
     }
 }
