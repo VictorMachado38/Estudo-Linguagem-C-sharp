@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BA6E8DDF-EA47-44B1-99F6-EF5B9274D5E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Componentes</RootNamespace>
+    <RootNamespace>Estudo</RootNamespace>
     <AssemblyName>Estudo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -195,6 +195,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Componentes_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
