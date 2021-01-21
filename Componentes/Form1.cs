@@ -152,5 +152,10 @@ namespace Componentes
             nud.ShowDialog();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("MARGE");
+        }
     }
 }
