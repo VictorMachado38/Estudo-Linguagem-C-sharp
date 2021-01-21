@@ -119,6 +119,7 @@ namespace Componentes
             this.Controls.Add(this.dtp_data);
             this.Name = "F_DateTimerPicker";
             this.Text = "F_DateTimerPicker";
+            this.Load += new System.EventHandler(this.F_DateTimerPicker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

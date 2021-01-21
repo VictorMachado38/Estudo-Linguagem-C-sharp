@@ -12,6 +12,7 @@ namespace Componentes
 {
     public partial class F_ListBox : Form
     {
+        //Implementeo o List Box
         List<string> carros = new List<string>();
         
         public F_ListBox()

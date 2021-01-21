@@ -44,5 +44,10 @@ namespace Componentes
         {
             dtp_data.Value = DateTime.Today;
         }
+
+        private void F_DateTimerPicker_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
