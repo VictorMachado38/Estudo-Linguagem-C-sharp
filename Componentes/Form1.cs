@@ -145,5 +145,12 @@ namespace Componentes
             F_MonthCalendar mc = new F_MonthCalendar();
             mc.ShowDialog();
         }
+
+        private void numericUpDownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_NumericUpDown nud = new F_NumericUpDown();
+            nud.ShowDialog();
+
+        }
     }
 }
