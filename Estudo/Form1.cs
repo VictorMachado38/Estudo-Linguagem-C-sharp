@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Componentes
 {
+    //Meu inical
     public partial class F_Principal : Form
     {
         public int num;
