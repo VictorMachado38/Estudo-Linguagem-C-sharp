@@ -29,6 +29,8 @@ namespace Componentes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Principal));
             this.button1 = new System.Windows.Forms.Button();
             this.tb_veiculos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +49,13 @@ namespace Componentes
             this.listViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maskedTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -210,6 +218,41 @@ namespace Componentes
             this.monthCalendarToolStripMenuItem.Text = "Month Calendar";
             this.monthCalendarToolStripMenuItem.Click += new System.EventHandler(this.monthCalendarToolStripMenuItem_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Meu Programa";
+            this.notifyIcon1.Visible = true;
+            // 
+            // MenuNotificação
+            // 
+            this.MenuNotificação.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmi_restaurar,
+            this.tsmi_mensagem,
+            this.tsmi_fechar});
+            this.MenuNotificação.Name = "contextMenuStrip1";
+            this.MenuNotificação.Size = new System.Drawing.Size(181, 92);
+            this.MenuNotificação.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // tsmi_restaurar
+            // 
+            this.tsmi_restaurar.Name = "tsmi_restaurar";
+            this.tsmi_restaurar.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_restaurar.Text = "Restaurar";
+            // 
+            // tsmi_mensagem
+            // 
+            this.tsmi_mensagem.Name = "tsmi_mensagem";
+            this.tsmi_mensagem.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_mensagem.Text = "Mensagem";
+            // 
+            // tsmi_fechar
+            // 
+            this.tsmi_fechar.Name = "tsmi_fechar";
+            this.tsmi_fechar.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_fechar.Text = "Fechar";
+            // 
             // F_Principal
             // 
             this.ClientSize = new System.Drawing.Size(288, 508);
@@ -230,6 +273,7 @@ namespace Componentes
             this.Load += new System.EventHandler(this.F_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.MenuNotificação.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,6 +299,11 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem listViewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maskedTextBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monthCalendarToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip MenuNotificação;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_restaurar;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_mensagem;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_fechar;
     }
 }
 

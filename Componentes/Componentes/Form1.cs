@@ -95,7 +95,18 @@ namespace Componentes
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+            if (e.ClickedItem.Name.ToString() == "tsmi_fechar")
+            {
+                this.Close();
+            }
+            else if(e.ClickedItem.Name.ToString() == "tsmi_restaurar")
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (e.ClickedItem.Name.ToString() == "tsmi_mensagem")
+            {
+                MessageBox.Show("Curso de C#");
+            }
         }
 
         private void dateTimerPickerToolStripMenuItem_Click(object sender, EventArgs e)
