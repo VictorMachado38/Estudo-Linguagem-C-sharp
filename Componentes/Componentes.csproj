@@ -190,6 +190,9 @@
     <EmbeddedResource Include="F_MonthCalendar.resx">
       <DependentUpon>F_MonthCalendar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_NumericUpDown.resx">
+      <DependentUpon>F_NumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Veiculos.resx">
       <DependentUpon>F_Veiculos.cs</DependentUpon>
     </EmbeddedResource>

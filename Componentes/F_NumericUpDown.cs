@@ -16,5 +16,25 @@ namespace Componentes
         {
             InitializeComponent();
         }
+
+        private void btn_definirValor_Click(object sender, EventArgs e)
+        {
+            //  Decimal.Parse(tb_valor.Text) = numericUpDown1.Value;
+            try
+            {
+                if ((Decimal.Parse(tb_valor.Text) >= numericUpDown1.Minimum) &
+                             (Decimal.Parse(tb_valor.Text) <= numericUpDown1.Maximum))
+
+                {
+                    numericUpDown1.Value = Decimal.Parse(tb_valor.Text);
+                }
+            }
+
+            catch
+            {
+
+            }
+            
+        }
     }
 }

@@ -55,7 +55,6 @@ namespace Componentes
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -263,20 +262,9 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(181, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // F_Principal
             // 
             this.ClientSize = new System.Drawing.Size(288, 508);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.bun_valNum);
             this.Controls.Add(this.btn_mostrar);
             this.Controls.Add(this.btn_limpar);
@@ -326,7 +314,6 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem tsmi_mensagem;
         private System.Windows.Forms.ToolStripMenuItem tsmi_fechar;
         private System.Windows.Forms.ToolStripMenuItem numericUpDownToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
     }
 }
 
