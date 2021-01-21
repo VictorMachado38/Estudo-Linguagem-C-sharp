@@ -153,5 +153,10 @@ namespace Componentes
 
         }
 
+        private void pictureBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_PictureBox pb = new F_PictureBox();
+            pb.ShowDialog();
+        }
     }
 }
