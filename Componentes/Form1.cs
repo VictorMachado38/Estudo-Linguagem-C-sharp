@@ -158,5 +158,11 @@ namespace Componentes
             F_PictureBox pb = new F_PictureBox();
             pb.ShowDialog();
         }
+
+        private void progrssBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_ProgressBar pb = new F_ProgressBar();
+            pb.ShowDialog();
+        }
     }
 }

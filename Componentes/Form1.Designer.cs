@@ -50,12 +50,13 @@ namespace Componentes
             this.maskedTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progrssBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -153,7 +154,8 @@ namespace Componentes
             this.maskedTextBoxToolStripMenuItem,
             this.monthCalendarToolStripMenuItem,
             this.numericUpDownToolStripMenuItem,
-            this.pictureBoxToolStripMenuItem});
+            this.pictureBoxToolStripMenuItem,
+            this.progrssBarToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
@@ -229,6 +231,13 @@ namespace Componentes
             this.numericUpDownToolStripMenuItem.Text = "Numeric Up Down";
             this.numericUpDownToolStripMenuItem.Click += new System.EventHandler(this.numericUpDownToolStripMenuItem_Click);
             // 
+            // pictureBoxToolStripMenuItem
+            // 
+            this.pictureBoxToolStripMenuItem.Name = "pictureBoxToolStripMenuItem";
+            this.pictureBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.pictureBoxToolStripMenuItem.Text = "Picture Box";
+            this.pictureBoxToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -264,12 +273,12 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // pictureBoxToolStripMenuItem
+            // progrssBarToolStripMenuItem
             // 
-            this.pictureBoxToolStripMenuItem.Name = "pictureBoxToolStripMenuItem";
-            this.pictureBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.pictureBoxToolStripMenuItem.Text = "Picture Box";
-            this.pictureBoxToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxToolStripMenuItem_Click);
+            this.progrssBarToolStripMenuItem.Name = "progrssBarToolStripMenuItem";
+            this.progrssBarToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.progrssBarToolStripMenuItem.Text = "Progress Bar";
+            this.progrssBarToolStripMenuItem.Click += new System.EventHandler(this.progrssBarToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -324,6 +333,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem tsmi_fechar;
         private System.Windows.Forms.ToolStripMenuItem numericUpDownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pictureBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem progrssBarToolStripMenuItem;
     }
 }
 
