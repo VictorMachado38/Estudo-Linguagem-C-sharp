@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1455554314_line-15_icon-icons.com_53330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\boldletters_122780.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\copy_paste_document_file_1557.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\folderorangesource_carpeta_naranja_10958.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\italic_icon-icons.com_70938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\new-file_40454 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\savedisk_floppydisk_guardar_1543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\underline-text-option_icon-icons.com_73354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\xmag_search_find_export_locate_5984.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_center_icon_159816.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-align-right_icon-icons.com_48214.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_left_icon_159813.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
