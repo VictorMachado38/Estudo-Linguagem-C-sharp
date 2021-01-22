@@ -51,12 +51,13 @@ namespace Componentes
             this.monthCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progrssBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.progrssBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radiobuttonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -81,10 +82,10 @@ namespace Componentes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Didite um Veicúlo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -136,7 +137,7 @@ namespace Componentes
             this.componentesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(288, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(288, 26);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -155,10 +156,11 @@ namespace Componentes
             this.monthCalendarToolStripMenuItem,
             this.numericUpDownToolStripMenuItem,
             this.pictureBoxToolStripMenuItem,
-            this.progrssBarToolStripMenuItem});
-            this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progrssBarToolStripMenuItem,
+            this.radiobuttonToolStripMenuItem});
+            this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
-            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(125, 25);
+            this.componentesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.componentesToolStripMenuItem.Text = "Componentes";
             // 
             // checkBoxToolStripMenuItem
@@ -238,6 +240,13 @@ namespace Componentes
             this.pictureBoxToolStripMenuItem.Text = "Picture Box";
             this.pictureBoxToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxToolStripMenuItem_Click);
             // 
+            // progrssBarToolStripMenuItem
+            // 
+            this.progrssBarToolStripMenuItem.Name = "progrssBarToolStripMenuItem";
+            this.progrssBarToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.progrssBarToolStripMenuItem.Text = "Progress Bar";
+            this.progrssBarToolStripMenuItem.Click += new System.EventHandler(this.progrssBarToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -273,12 +282,12 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // progrssBarToolStripMenuItem
+            // radiobuttonToolStripMenuItem
             // 
-            this.progrssBarToolStripMenuItem.Name = "progrssBarToolStripMenuItem";
-            this.progrssBarToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.progrssBarToolStripMenuItem.Text = "Progress Bar";
-            this.progrssBarToolStripMenuItem.Click += new System.EventHandler(this.progrssBarToolStripMenuItem_Click);
+            this.radiobuttonToolStripMenuItem.Name = "radiobuttonToolStripMenuItem";
+            this.radiobuttonToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.radiobuttonToolStripMenuItem.Text = "Radiobutton";
+            this.radiobuttonToolStripMenuItem.Click += new System.EventHandler(this.radiobuttonToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -334,6 +343,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem numericUpDownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pictureBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem progrssBarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem radiobuttonToolStripMenuItem;
     }
 }
 
