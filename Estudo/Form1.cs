@@ -77,14 +77,53 @@ namespace Estudo
             Salvar();
         }
 
-        private void Abir()
+        public void Abir()
         {
-            this.openFileDialog1.Multiselect = false;
+          //  this.openFileDialog1.Multiselect = false;
             this.openFileDialog1.Title = "Abrir arquivo";
-            openFileDialog1.InitialDirectory = @"C:\Users\Machado\";
-            openFileDialog1.Filter = "(*.TXT)|*.TXT" + "Todos Arquivos(*.*)|*.*";
-           // openFileDialog1
+            openFileDialog1.InitialDirectory = @"C:\Users\Machado\Desktop\";
+            openFileDialog1.Filter = "Todos Arquivos(*.*)|*.*";
+            // openFileDialog1
+            /*  if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
+              {
 
+              }*/
+            DialogResult dr = this.openFileDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    FileStream arquivo = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                    StreamReader cfb_StreamRedar = new StreamReader(arquivo);
+                    cfb_StreamRedar.BaseStream.Seek(0, SeekOrigin.Begin);
+                    this.richTextBox1.Text = "";
+                    string linha = cfb_StreamRedar.ReadLine();
+                    while(linha != null)
+                    {
+                        this.richTextBox1.Text += linha + "\n";
+                        linha = cfb_StreamRedar.ReadLine();
+                      
+                    }
+                    cfb_StreamRedar.Close();
+                }
+                catch (Exception ex)
+                {
+                   
+                    MessageBox.Show("Erro " + ex.Message, "Erro ao abrir", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+        }
+
+        private void brn_abrir_Click(object sender, EventArgs e)
+        {
+            Abir();
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abir();
         }
     }
         
