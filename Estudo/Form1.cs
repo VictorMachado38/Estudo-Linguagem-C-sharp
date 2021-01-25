@@ -258,7 +258,7 @@ namespace Estudo
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
                 }
-
+               
             }
         }
         private void Sublinahdo()
@@ -379,6 +379,64 @@ namespace Estudo
         private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AlinhamentoDireita();
+        }
+
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            imprimir();
+        }
+
+        private void imprimir()
+        {
+            printDialog1.Document = printDocument1;
+            string texto = this.richTextBox1.Text;
+            leitura = new StringReader(texto);
+
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            float linhasPaginas = 0;
+            float PosY = 0;
+            int cont = 0;
+            float margemEsquerda = e.MarginBounds.Left - 50;
+            float margemSuperior = e.MarginBounds.Top - 50;
+
+            if (margemEsquerda < 5)
+            {
+                margemEsquerda = 20;
+            }
+            if (margemSuperior < 5)
+            {
+                margemSuperior = 20;
+            }
+            string linha = null;
+
+            Font font = this.richTextBox1.Font;
+            SolidBrush pincel = new SolidBrush(Color.Black);
+            linhasPaginas = e.MarginBounds.Height / font.GetHeight(e.Graphics);
+            linha = leitura.ReadLine();
+            while(cont < linhasPaginas)
+            {
+                PosY = (margemSuperior + (cont * font.GetHeight(e.Graphics)));
+                e.Graphics.DrawString(linha, font,pincel, margemEsquerda, PosY, new StringFormat());
+                cont += 1;
+                linha = leitura.ReadLine();
+            }
+            if(linha != null)
+            {
+                e.HasMorePages = true;
+
+            }
+            else
+            {
+                e.HasMorePages = false;
+            }
+            pincel.Dispose();
         }
     }
         
