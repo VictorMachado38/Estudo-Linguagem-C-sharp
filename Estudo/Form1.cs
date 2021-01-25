@@ -27,7 +27,7 @@ namespace Estudo
 
         private void italicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Italico();
         }
 
         private void novo()
@@ -124,6 +124,220 @@ namespace Estudo
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Abir();
+        }
+
+        private void copiar()
+        {
+            if(richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.Copy();
+            }
+
+        }
+
+        private void colar()
+        {
+            richTextBox1.Paste();
+        }
+
+        private void brn_copiar_Click(object sender, EventArgs e)
+        {
+            copiar();
+        }
+
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copiar();
+        }
+
+        private void btn_colar_Click(object sender, EventArgs e)
+        {
+            colar();
+        }
+
+        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colar();
+        }
+        private void Negrito()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool n,i,s = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            n = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
+
+
+
+            if (n == false)
+            {
+                if( i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                }
+                else if (i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
+                }
+                else if (i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic);
+                }
+                else if (i == false & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
+                }
+                
+            }
+            else
+            {
+                if (i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte,  FontStyle.Italic | FontStyle.Underline);
+                }
+                else if (i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte,   FontStyle.Underline);
+                }
+                else if (i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte,   FontStyle.Italic);
+                }
+                
+            }
+        }
+        private void Italico()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool n, i, u = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            n = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            u = richTextBox1.SelectionFont.Underline;
+
+
+
+            if (i == false)
+            {
+                if (n == true & u == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic | FontStyle.Bold  | FontStyle.Underline);
+                }
+                else if (n == false & u == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic| FontStyle.Underline);
+                }
+                else if (n == true & u == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic | FontStyle.Italic);
+                }
+                else if (n == false & u == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic);
+                }
+
+            }
+            else
+            {
+                if (n == true & u == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
+                }
+                else if (n== false & u == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline);
+                }
+                else if (n == true & u == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
+                }
+
+            }
+        }
+        private void Sublinahdo()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool n, i, s = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            n = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
+
+
+
+            if (s == false)
+            {
+                if (i == true & n == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline | FontStyle.Bold | FontStyle.Italic );
+                }
+                else if (i == false & n == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline | FontStyle.Bold );
+                }
+                else if (i == true & n == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline | FontStyle.Italic);
+                }
+                else if (i == false & n == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline);
+                }
+
+            }
+            else
+            {
+                if (i == true & n == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic | FontStyle.Bold);
+                }
+                else if (i == false & n == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
+                }
+                else if (i == true & n == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic);
+                }
+
+            }
+
+        }
+            
+
+        private void brn_negrito_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void negritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void brn_italico_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sublinahdo();
+        }
+
+        private void brn_sublinahdo_Click(object sender, EventArgs e)
+        {
+            Sublinahdo();
         }
     }
         
