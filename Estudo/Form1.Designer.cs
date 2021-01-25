@@ -225,26 +225,29 @@ namespace Estudo
             this.direitaToolStripMenuItem,
             this.justificarToolStripMenuItem});
             this.alinhamentoToolStripMenuItem.Name = "alinhamentoToolStripMenuItem";
-            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alinhamentoToolStripMenuItem.Text = "Alinhamento";
             // 
             // centralizarToolStripMenuItem
             // 
             this.centralizarToolStripMenuItem.Name = "centralizarToolStripMenuItem";
-            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.centralizarToolStripMenuItem.Text = "Centralizar";
+            this.centralizarToolStripMenuItem.Click += new System.EventHandler(this.centralizarToolStripMenuItem_Click);
             // 
             // esquerdaToolStripMenuItem
             // 
             this.esquerdaToolStripMenuItem.Name = "esquerdaToolStripMenuItem";
-            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.esquerdaToolStripMenuItem.Text = "Esquerda";
+            this.esquerdaToolStripMenuItem.Click += new System.EventHandler(this.esquerdaToolStripMenuItem_Click);
             // 
             // direitaToolStripMenuItem
             // 
             this.direitaToolStripMenuItem.Name = "direitaToolStripMenuItem";
-            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.direitaToolStripMenuItem.Text = "Direita";
+            this.direitaToolStripMenuItem.Click += new System.EventHandler(this.direitaToolStripMenuItem_Click);
             // 
             // justificarToolStripMenuItem
             // 
@@ -267,9 +270,9 @@ namespace Estudo
             this.brn_sublinahdo,
             this.brn_fonte,
             this.toolStripSeparator3,
-            this.btn_textoADireita,
             this.btn_textoEsquerda,
-            this.brn_textoCentro});
+            this.brn_textoCentro,
+            this.btn_textoADireita});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(807, 25);
@@ -388,6 +391,7 @@ namespace Estudo
             this.btn_textoADireita.Name = "btn_textoADireita";
             this.btn_textoADireita.Size = new System.Drawing.Size(23, 22);
             this.btn_textoADireita.Text = "Texto a direita";
+            this.btn_textoADireita.Click += new System.EventHandler(this.btn_textoADireita_Click);
             // 
             // btn_textoEsquerda
             // 
@@ -397,6 +401,7 @@ namespace Estudo
             this.btn_textoEsquerda.Name = "btn_textoEsquerda";
             this.btn_textoEsquerda.Size = new System.Drawing.Size(23, 22);
             this.btn_textoEsquerda.Text = "Texto a esquerda";
+            this.btn_textoEsquerda.Click += new System.EventHandler(this.btn_textoEsquerda_Click);
             // 
             // brn_textoCentro
             // 
@@ -406,6 +411,7 @@ namespace Estudo
             this.brn_textoCentro.Name = "brn_textoCentro";
             this.brn_textoCentro.Size = new System.Drawing.Size(23, 22);
             this.brn_textoCentro.Text = "Texto Centro";
+            this.brn_textoCentro.Click += new System.EventHandler(this.brn_textoCentro_Click);
             // 
             // openFileDialog1
             // 

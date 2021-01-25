@@ -313,8 +313,6 @@ namespace Estudo
             }
 
         }
-            
-
         private void brn_negrito_Click(object sender, EventArgs e)
         {
             Negrito();
@@ -338,6 +336,49 @@ namespace Estudo
         private void brn_sublinahdo_Click(object sender, EventArgs e)
         {
             Sublinahdo();
+        }
+
+        private void AlinhamentoDireita()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+        private void AlinhamentoEsquerda()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+        private void AlinhamentoCentro()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void btn_textoADireita_Click(object sender, EventArgs e)
+        {
+            AlinhamentoDireita();
+        }
+
+        private void btn_textoEsquerda_Click(object sender, EventArgs e)
+        {
+            AlinhamentoEsquerda();
+        }
+
+        private void brn_textoCentro_Click(object sender, EventArgs e)
+        {
+            AlinhamentoCentro();
+        }
+
+        private void centralizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlinhamentoCentro();
+        }
+
+        private void esquerdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlinhamentoEsquerda();
+        }
+
+        private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlinhamentoDireita();
         }
     }
         
