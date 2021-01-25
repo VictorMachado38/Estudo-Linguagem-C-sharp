@@ -52,12 +52,13 @@ namespace Componentes
             this.numericUpDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progrssBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radiobuttonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.radiobuttonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -157,7 +158,8 @@ namespace Componentes
             this.numericUpDownToolStripMenuItem,
             this.pictureBoxToolStripMenuItem,
             this.progrssBarToolStripMenuItem,
-            this.radiobuttonToolStripMenuItem});
+            this.radiobuttonToolStripMenuItem,
+            this.trackBarToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
@@ -166,86 +168,93 @@ namespace Componentes
             // checkBoxToolStripMenuItem
             // 
             this.checkBoxToolStripMenuItem.Name = "checkBoxToolStripMenuItem";
-            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.checkBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.checkBoxToolStripMenuItem.Text = "CheckBox";
             this.checkBoxToolStripMenuItem.Click += new System.EventHandler(this.checkBoxToolStripMenuItem_Click);
             // 
             // chckListBoxToolStripMenuItem
             // 
             this.chckListBoxToolStripMenuItem.Name = "chckListBoxToolStripMenuItem";
-            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.chckListBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.chckListBoxToolStripMenuItem.Text = "Chck List Box";
             this.chckListBoxToolStripMenuItem.Click += new System.EventHandler(this.chckListBoxToolStripMenuItem_Click);
             // 
             // comboBoxToolStripMenuItem
             // 
             this.comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
-            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.comboBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.comboBoxToolStripMenuItem.Text = "Combo Box";
             this.comboBoxToolStripMenuItem.Click += new System.EventHandler(this.comboBoxToolStripMenuItem_Click);
             // 
             // dateTimerPickerToolStripMenuItem
             // 
             this.dateTimerPickerToolStripMenuItem.Name = "dateTimerPickerToolStripMenuItem";
-            this.dateTimerPickerToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.dateTimerPickerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.dateTimerPickerToolStripMenuItem.Text = "Date Timer Picker";
             this.dateTimerPickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimerPickerToolStripMenuItem_Click);
             // 
             // linkLabelToolStripMenuItem
             // 
             this.linkLabelToolStripMenuItem.Name = "linkLabelToolStripMenuItem";
-            this.linkLabelToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.linkLabelToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.linkLabelToolStripMenuItem.Text = "Link / Label";
             this.linkLabelToolStripMenuItem.Click += new System.EventHandler(this.linkLabelToolStripMenuItem_Click);
             // 
             // listBoxToolStripMenuItem
             // 
             this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
-            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.listBoxToolStripMenuItem.Text = "List Box";
             this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
             // 
             // listViewToolStripMenuItem
             // 
             this.listViewToolStripMenuItem.Name = "listViewToolStripMenuItem";
-            this.listViewToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.listViewToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.listViewToolStripMenuItem.Text = "List View";
             this.listViewToolStripMenuItem.Click += new System.EventHandler(this.listViewToolStripMenuItem_Click);
             // 
             // maskedTextBoxToolStripMenuItem
             // 
             this.maskedTextBoxToolStripMenuItem.Name = "maskedTextBoxToolStripMenuItem";
-            this.maskedTextBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.maskedTextBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.maskedTextBoxToolStripMenuItem.Text = "Masked Text Box";
             this.maskedTextBoxToolStripMenuItem.Click += new System.EventHandler(this.maskedTextBoxToolStripMenuItem_Click);
             // 
             // monthCalendarToolStripMenuItem
             // 
             this.monthCalendarToolStripMenuItem.Name = "monthCalendarToolStripMenuItem";
-            this.monthCalendarToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.monthCalendarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.monthCalendarToolStripMenuItem.Text = "Month Calendar";
             this.monthCalendarToolStripMenuItem.Click += new System.EventHandler(this.monthCalendarToolStripMenuItem_Click);
             // 
             // numericUpDownToolStripMenuItem
             // 
             this.numericUpDownToolStripMenuItem.Name = "numericUpDownToolStripMenuItem";
-            this.numericUpDownToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.numericUpDownToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.numericUpDownToolStripMenuItem.Text = "Numeric Up Down";
             this.numericUpDownToolStripMenuItem.Click += new System.EventHandler(this.numericUpDownToolStripMenuItem_Click);
             // 
             // pictureBoxToolStripMenuItem
             // 
             this.pictureBoxToolStripMenuItem.Name = "pictureBoxToolStripMenuItem";
-            this.pictureBoxToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.pictureBoxToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.pictureBoxToolStripMenuItem.Text = "Picture Box";
             this.pictureBoxToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxToolStripMenuItem_Click);
             // 
             // progrssBarToolStripMenuItem
             // 
             this.progrssBarToolStripMenuItem.Name = "progrssBarToolStripMenuItem";
-            this.progrssBarToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.progrssBarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.progrssBarToolStripMenuItem.Text = "Progress Bar";
             this.progrssBarToolStripMenuItem.Click += new System.EventHandler(this.progrssBarToolStripMenuItem_Click);
+            // 
+            // radiobuttonToolStripMenuItem
+            // 
+            this.radiobuttonToolStripMenuItem.Name = "radiobuttonToolStripMenuItem";
+            this.radiobuttonToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.radiobuttonToolStripMenuItem.Text = "Radiobutton";
+            this.radiobuttonToolStripMenuItem.Click += new System.EventHandler(this.radiobuttonToolStripMenuItem_Click);
             // 
             // notifyIcon1
             // 
@@ -282,12 +291,12 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // radiobuttonToolStripMenuItem
+            // trackBarToolStripMenuItem
             // 
-            this.radiobuttonToolStripMenuItem.Name = "radiobuttonToolStripMenuItem";
-            this.radiobuttonToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.radiobuttonToolStripMenuItem.Text = "Radiobutton";
-            this.radiobuttonToolStripMenuItem.Click += new System.EventHandler(this.radiobuttonToolStripMenuItem_Click);
+            this.trackBarToolStripMenuItem.Name = "trackBarToolStripMenuItem";
+            this.trackBarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.trackBarToolStripMenuItem.Text = "Track Bar";
+            this.trackBarToolStripMenuItem.Click += new System.EventHandler(this.trackBarToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -344,6 +353,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem pictureBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem progrssBarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem radiobuttonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trackBarToolStripMenuItem;
     }
 }
 
