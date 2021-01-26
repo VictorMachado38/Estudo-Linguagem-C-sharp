@@ -39,7 +39,12 @@ namespace Componentes
             if (int.Parse(tb_valor.Text) >= trackBar1.Minimum & int.Parse(tb_valor.Text) <= trackBar1.Maximum)
                 trackBar1.Value = int.Parse(tb_valor.Text);
             else
+            {
                 MessageBox.Show("Digite um número de 1 a 100");
+                tb_valor.Clear();
+                tb_valor.Focus();
+            }
+                
 
         }
     }

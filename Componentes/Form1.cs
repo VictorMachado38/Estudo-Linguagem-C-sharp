@@ -176,5 +176,18 @@ namespace Componentes
             F_TrackBar tb = new F_TrackBar();
             tb.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            F_TreeView tv = new F_TreeView();
+            tv.ShowDialog();
+        }
+
+        private void webBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            F_WebBrowser wb = new F_WebBrowser();
+            wb.ShowDialog();
+        }
     }
 }

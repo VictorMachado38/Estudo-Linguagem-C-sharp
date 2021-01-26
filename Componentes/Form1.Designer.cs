@@ -53,12 +53,14 @@ namespace Componentes
             this.pictureBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progrssBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.radiobuttonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.webBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +161,9 @@ namespace Componentes
             this.pictureBoxToolStripMenuItem,
             this.progrssBarToolStripMenuItem,
             this.radiobuttonToolStripMenuItem,
-            this.trackBarToolStripMenuItem});
+            this.trackBarToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.webBrowserToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
@@ -256,6 +260,27 @@ namespace Componentes
             this.radiobuttonToolStripMenuItem.Text = "Radiobutton";
             this.radiobuttonToolStripMenuItem.Click += new System.EventHandler(this.radiobuttonToolStripMenuItem_Click);
             // 
+            // trackBarToolStripMenuItem
+            // 
+            this.trackBarToolStripMenuItem.Name = "trackBarToolStripMenuItem";
+            this.trackBarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.trackBarToolStripMenuItem.Text = "Track Bar";
+            this.trackBarToolStripMenuItem.Click += new System.EventHandler(this.trackBarToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem1.Text = "Tree View";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // webBrowserToolStripMenuItem
+            // 
+            this.webBrowserToolStripMenuItem.Name = "webBrowserToolStripMenuItem";
+            this.webBrowserToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.webBrowserToolStripMenuItem.Text = "Web Browser";
+            this.webBrowserToolStripMenuItem.Click += new System.EventHandler(this.webBrowserToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -290,13 +315,6 @@ namespace Componentes
             this.tsmi_fechar.Name = "tsmi_fechar";
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
-            // 
-            // trackBarToolStripMenuItem
-            // 
-            this.trackBarToolStripMenuItem.Name = "trackBarToolStripMenuItem";
-            this.trackBarToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.trackBarToolStripMenuItem.Text = "Track Bar";
-            this.trackBarToolStripMenuItem.Click += new System.EventHandler(this.trackBarToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -354,6 +372,8 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem progrssBarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem radiobuttonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trackBarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem webBrowserToolStripMenuItem;
     }
 }
 
