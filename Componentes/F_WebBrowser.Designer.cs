@@ -55,6 +55,7 @@ namespace Componentes
             this.tb_url.Name = "tb_url";
             this.tb_url.Size = new System.Drawing.Size(572, 20);
             this.tb_url.TabIndex = 1;
+            this.tb_url.TextChanged += new System.EventHandler(this.tb_url_TextChanged);
             this.tb_url.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_url_KeyDown);
             // 
             // btn_ir

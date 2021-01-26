@@ -56,12 +56,13 @@ namespace Componentes
             this.trackBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.webBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -165,7 +166,8 @@ namespace Componentes
             this.trackBarToolStripMenuItem,
             this.toolStripMenuItem1,
             this.webBrowserToolStripMenuItem,
-            this.splitContainerToolStripMenuItem});
+            this.splitContainerToolStripMenuItem,
+            this.tabControlToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
@@ -283,6 +285,13 @@ namespace Componentes
             this.webBrowserToolStripMenuItem.Text = "Web Browser";
             this.webBrowserToolStripMenuItem.Click += new System.EventHandler(this.webBrowserToolStripMenuItem_Click);
             // 
+            // splitContainerToolStripMenuItem
+            // 
+            this.splitContainerToolStripMenuItem.Name = "splitContainerToolStripMenuItem";
+            this.splitContainerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.splitContainerToolStripMenuItem.Text = "Split Container";
+            this.splitContainerToolStripMenuItem.Click += new System.EventHandler(this.splitContainerToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -318,12 +327,12 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // splitContainerToolStripMenuItem
+            // tabControlToolStripMenuItem
             // 
-            this.splitContainerToolStripMenuItem.Name = "splitContainerToolStripMenuItem";
-            this.splitContainerToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.splitContainerToolStripMenuItem.Text = "Split Container";
-            this.splitContainerToolStripMenuItem.Click += new System.EventHandler(this.splitContainerToolStripMenuItem_Click);
+            this.tabControlToolStripMenuItem.Name = "tabControlToolStripMenuItem";
+            this.tabControlToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.tabControlToolStripMenuItem.Text = "Tab Control";
+            this.tabControlToolStripMenuItem.Click += new System.EventHandler(this.tabControlToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -384,6 +393,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem webBrowserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem splitContainerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tabControlToolStripMenuItem;
     }
 }
 

@@ -47,7 +47,8 @@ namespace Componentes
             "Avião ",
             "Navio",
             "Ônibus",
-            "Trem"});
+            "Trem",
+            "a"});
             this.clb_transportes.Location = new System.Drawing.Point(28, 12);
             this.clb_transportes.Name = "clb_transportes";
             this.clb_transportes.Size = new System.Drawing.Size(227, 388);

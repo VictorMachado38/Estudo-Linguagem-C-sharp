@@ -89,5 +89,10 @@ namespace Componentes
         {
             home = tb_url.Text;
         }
+
+        private void tb_url_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
