@@ -167,6 +167,12 @@
     <Compile Include="F_Radiobutton.Designer.cs">
       <DependentUpon>F_Radiobutton.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_SplitContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_SplitContainer.Designer.cs">
+      <DependentUpon>F_SplitContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_TrackBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Radiobutton.resx">
       <DependentUpon>F_Radiobutton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_SplitContainer.resx">
+      <DependentUpon>F_SplitContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_TrackBar.resx">
       <DependentUpon>F_TrackBar.cs</DependentUpon>

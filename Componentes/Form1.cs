@@ -189,5 +189,11 @@ namespace Componentes
             F_WebBrowser wb = new F_WebBrowser();
             wb.ShowDialog();
         }
+
+        private void splitContainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_SplitContainer sc = new F_SplitContainer();
+            sc.ShowDialog();
+        }
     }
 }
