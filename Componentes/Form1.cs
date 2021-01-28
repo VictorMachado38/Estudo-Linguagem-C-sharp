@@ -221,5 +221,11 @@ namespace Componentes
             F_BackgroudWorker bw = new F_BackgroudWorker();
             bw.ShowDialog();
         }
+
+        private void timerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Timer t = new F_Timer();
+            t.ShowDialog();
+        }
     }
 }

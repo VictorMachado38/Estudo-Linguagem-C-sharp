@@ -61,12 +61,13 @@ namespace Componentes
             this.tabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baclgroudWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.baclgroudWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +176,8 @@ namespace Componentes
             this.tabelToolStripMenuItem,
             this.tableLayoutPanelToolStripMenuItem,
             this.toolStripContainerToolStripMenuItem,
-            this.baclgroudWorkerToolStripMenuItem});
+            this.baclgroudWorkerToolStripMenuItem,
+            this.timerToolStripMenuItem});
             this.componentesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
@@ -327,6 +329,13 @@ namespace Componentes
             this.toolStripContainerToolStripMenuItem.Text = "Tool Strip Container";
             this.toolStripContainerToolStripMenuItem.Click += new System.EventHandler(this.toolStripContainerToolStripMenuItem_Click);
             // 
+            // baclgroudWorkerToolStripMenuItem
+            // 
+            this.baclgroudWorkerToolStripMenuItem.Name = "baclgroudWorkerToolStripMenuItem";
+            this.baclgroudWorkerToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.baclgroudWorkerToolStripMenuItem.Text = "Baclgroud Worker";
+            this.baclgroudWorkerToolStripMenuItem.Click += new System.EventHandler(this.baclgroudWorkerToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -362,12 +371,12 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // baclgroudWorkerToolStripMenuItem
+            // timerToolStripMenuItem
             // 
-            this.baclgroudWorkerToolStripMenuItem.Name = "baclgroudWorkerToolStripMenuItem";
-            this.baclgroudWorkerToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.baclgroudWorkerToolStripMenuItem.Text = "Baclgroud Worker";
-            this.baclgroudWorkerToolStripMenuItem.Click += new System.EventHandler(this.baclgroudWorkerToolStripMenuItem_Click);
+            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            this.timerToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.timerToolStripMenuItem.Text = "Timer";
+            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
             // 
             // F_Principal
             // 
@@ -433,6 +442,7 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem tableLayoutPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripContainerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baclgroudWorkerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timerToolStripMenuItem;
     }
 }
 
