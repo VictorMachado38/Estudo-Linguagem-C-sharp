@@ -123,7 +123,7 @@ namespace Componentes
         }
         private void definirMaximo()
         {
-            numericUpDown1.Maximum = tabControl1.TabPages.Count;
+            numericUpDown1.Maximum = tabControl1.TabPages.Count-1;
         }
 
         private void F_TabControl_Load(object sender, EventArgs e)

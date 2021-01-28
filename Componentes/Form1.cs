@@ -201,5 +201,11 @@ namespace Componentes
             F_TabControl tb = new F_TabControl();
             tb.ShowDialog();
         }
+
+        private void tableLayoutPanelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_TableLayoutPanel tlp = new F_TableLayoutPanel();
+            tlp.ShowDialog();
+        }
     }
 }
