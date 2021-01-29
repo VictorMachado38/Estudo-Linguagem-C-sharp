@@ -62,12 +62,14 @@ namespace Componentes
             this.tableLayoutPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baclgroudWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuNotificação = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_restaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_mensagem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLiteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.MenuNotificação.SuspendLayout();
             this.SuspendLayout();
@@ -144,7 +146,8 @@ namespace Componentes
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.componentesToolStripMenuItem});
+            this.componentesToolStripMenuItem,
+            this.sQLiteToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(288, 26);
@@ -336,6 +339,13 @@ namespace Componentes
             this.baclgroudWorkerToolStripMenuItem.Text = "Baclgroud Worker";
             this.baclgroudWorkerToolStripMenuItem.Click += new System.EventHandler(this.baclgroudWorkerToolStripMenuItem_Click);
             // 
+            // timerToolStripMenuItem
+            // 
+            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            this.timerToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.timerToolStripMenuItem.Text = "Timer";
+            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.MenuNotificação;
@@ -371,12 +381,21 @@ namespace Componentes
             this.tsmi_fechar.Size = new System.Drawing.Size(133, 22);
             this.tsmi_fechar.Text = "Fechar";
             // 
-            // timerToolStripMenuItem
+            // sQLiteToolStripMenuItem1
             // 
-            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
-            this.timerToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.timerToolStripMenuItem.Text = "Timer";
-            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
+            this.sQLiteToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLiteToolStripMenuItem2});
+            this.sQLiteToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.sQLiteToolStripMenuItem1.Name = "sQLiteToolStripMenuItem1";
+            this.sQLiteToolStripMenuItem1.Size = new System.Drawing.Size(65, 22);
+            this.sQLiteToolStripMenuItem1.Text = "SQLite";
+            // 
+            // sQLiteToolStripMenuItem2
+            // 
+            this.sQLiteToolStripMenuItem2.Name = "sQLiteToolStripMenuItem2";
+            this.sQLiteToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.sQLiteToolStripMenuItem2.Text = "SQLite";
+            this.sQLiteToolStripMenuItem2.Click += new System.EventHandler(this.sQLiteToolStripMenuItem2_Click);
             // 
             // F_Principal
             // 
@@ -443,6 +462,8 @@ namespace Componentes
         private System.Windows.Forms.ToolStripMenuItem toolStripContainerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baclgroudWorkerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sQLiteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sQLiteToolStripMenuItem2;
     }
 }
 
