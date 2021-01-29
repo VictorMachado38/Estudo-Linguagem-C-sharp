@@ -15,6 +15,8 @@ namespace Academia_com_banco_de_dados
         public Form1()
         {
             InitializeComponent();
+            F_Login f_Login = new F_Login(this);
+            f_Login.ShowDialog();
         }
     }
 }
