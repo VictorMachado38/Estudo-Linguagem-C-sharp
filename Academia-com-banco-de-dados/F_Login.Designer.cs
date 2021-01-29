@@ -29,23 +29,23 @@ namespace Academia_com_banco_de_dados
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_username = new System.Windows.Forms.Label();
+            this.lb_usarmane = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_senha = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_username = new System.Windows.Forms.TextBox();
             this.btn_logar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tb_username
+            // lb_usarmane
             // 
-            this.tb_username.AutoSize = true;
-            this.tb_username.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_username.Location = new System.Drawing.Point(31, 27);
-            this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(71, 24);
-            this.tb_username.TabIndex = 0;
-            this.tb_username.Text = "Usermane";
+            this.lb_usarmane.AutoSize = true;
+            this.lb_usarmane.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_usarmane.Location = new System.Drawing.Point(31, 27);
+            this.lb_usarmane.Name = "lb_usarmane";
+            this.lb_usarmane.Size = new System.Drawing.Size(71, 24);
+            this.lb_usarmane.TabIndex = 0;
+            this.lb_usarmane.Text = "Usermane";
             // 
             // label2
             // 
@@ -61,16 +61,16 @@ namespace Academia_com_banco_de_dados
             // 
             this.tb_senha.Location = new System.Drawing.Point(31, 107);
             this.tb_senha.Name = "tb_senha";
-            this.tb_senha.PasswordChar = ' ';
+            this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(138, 20);
             this.tb_senha.TabIndex = 2;
             // 
-            // textBox2
+            // tb_username
             // 
-            this.textBox2.Location = new System.Drawing.Point(34, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 3;
+            this.tb_username.Location = new System.Drawing.Point(34, 45);
+            this.tb_username.Name = "tb_username";
+            this.tb_username.Size = new System.Drawing.Size(138, 20);
+            this.tb_username.TabIndex = 3;
             // 
             // btn_logar
             // 
@@ -103,13 +103,14 @@ namespace Academia_com_banco_de_dados
             this.ClientSize = new System.Drawing.Size(213, 242);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_logar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_username);
             this.Controls.Add(this.tb_senha);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_username);
+            this.Controls.Add(this.lb_usarmane);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,10 +119,10 @@ namespace Academia_com_banco_de_dados
 
         #endregion
 
-        private System.Windows.Forms.Label tb_username;
+        private System.Windows.Forms.Label lb_usarmane;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_senha;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.Button btn_logar;
         private System.Windows.Forms.Button btn_cancelar;
     }

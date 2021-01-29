@@ -30,11 +30,11 @@ namespace Academia_com_banco_de_dados
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pb_ledLogado = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_acesso = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lb_nomeUsuario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_acesso = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pb_ledLogado = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).BeginInit();
             this.SuspendLayout();
@@ -53,33 +53,14 @@ namespace Academia_com_banco_de_dados
             this.panel1.Size = new System.Drawing.Size(800, 28);
             this.panel1.TabIndex = 0;
             // 
-            // pb_ledLogado
+            // lb_nomeUsuario
             // 
-            this.pb_ledLogado.Image = global::Academia_com_banco_de_dados.Properties.Resources.led_vermelho;
-            this.pb_ledLogado.Location = new System.Drawing.Point(5, 4);
-            this.pb_ledLogado.Name = "pb_ledLogado";
-            this.pb_ledLogado.Size = new System.Drawing.Size(22, 22);
-            this.pb_ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_ledLogado.TabIndex = 0;
-            this.pb_ledLogado.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Acesso:";
-            // 
-            // lb_acesso
-            // 
-            this.lb_acesso.AutoSize = true;
-            this.lb_acesso.Location = new System.Drawing.Point(77, 8);
-            this.lb_acesso.Name = "lb_acesso";
-            this.lb_acesso.Size = new System.Drawing.Size(13, 13);
-            this.lb_acesso.TabIndex = 2;
-            this.lb_acesso.Text = "0";
+            this.lb_nomeUsuario.AutoSize = true;
+            this.lb_nomeUsuario.Location = new System.Drawing.Point(146, 8);
+            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
+            this.lb_nomeUsuario.Size = new System.Drawing.Size(16, 13);
+            this.lb_nomeUsuario.TabIndex = 4;
+            this.lb_nomeUsuario.Text = "---";
             // 
             // label2
             // 
@@ -90,14 +71,33 @@ namespace Academia_com_banco_de_dados
             this.label2.TabIndex = 3;
             this.label2.Text = "Usuário:";
             // 
-            // lb_nomeUsuario
+            // lb_acesso
             // 
-            this.lb_nomeUsuario.AutoSize = true;
-            this.lb_nomeUsuario.Location = new System.Drawing.Point(146, 8);
-            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
-            this.lb_nomeUsuario.Size = new System.Drawing.Size(16, 13);
-            this.lb_nomeUsuario.TabIndex = 4;
-            this.lb_nomeUsuario.Text = "---";
+            this.lb_acesso.AutoSize = true;
+            this.lb_acesso.Location = new System.Drawing.Point(77, 8);
+            this.lb_acesso.Name = "lb_acesso";
+            this.lb_acesso.Size = new System.Drawing.Size(13, 13);
+            this.lb_acesso.TabIndex = 2;
+            this.lb_acesso.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Acesso:";
+            // 
+            // pb_ledLogado
+            // 
+            this.pb_ledLogado.Image = global::Academia_com_banco_de_dados.Properties.Resources.led_vermelho;
+            this.pb_ledLogado.Location = new System.Drawing.Point(5, 4);
+            this.pb_ledLogado.Name = "pb_ledLogado";
+            this.pb_ledLogado.Size = new System.Drawing.Size(22, 22);
+            this.pb_ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ledLogado.TabIndex = 0;
+            this.pb_ledLogado.TabStop = false;
             // 
             // Form1
             // 
@@ -118,11 +118,11 @@ namespace Academia_com_banco_de_dados
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lb_nomeUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lb_acesso;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pb_ledLogado;
+        public System.Windows.Forms.Label lb_acesso;
+        public System.Windows.Forms.Label lb_nomeUsuario;
     }
 }
 

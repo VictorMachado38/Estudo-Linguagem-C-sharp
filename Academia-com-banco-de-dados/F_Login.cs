@@ -13,6 +13,7 @@ namespace Academia_com_banco_de_dados
     public partial class F_Login : Form
     {
         Form1 form1;
+        DataTable dt = new DataTable();
         public F_Login(Form1 f)
         {
             InitializeComponent();
@@ -27,15 +28,35 @@ namespace Academia_com_banco_de_dados
 
             if(usermanse == "")
             {
-                MessageBox.Show("Usuario invalido ");
-                tb_username.Focus();
+                MessageBox.Show("Usuario invalido");
+                lb_usarmane.Focus();
                 return;
             }
             if (senha == "")
             {
-                MessageBox.Show("Senha invalido ");
+                MessageBox.Show("Senha invalida");
                 tb_senha.Focus();
                 return;
+            }
+
+            string sql = "SELECT * FROM tb_usuarios WHERE T_USERNAME='"+ usermanse+"'AND T_SENHAUSUARIO='"+senha+"'";
+            MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+sql);
+            dt = Banco.consulta(sql);
+            if(dt.Rows.Count == 1)
+            {
+                form1.lb_acesso.Text = dt.Rows[0].ItemArray[5].ToString();
+                form1.lb_nomeUsuario.Text = dt.Rows[0].Field<string>("T_NOMEUSUSARIO");
+                form1.pb_ledLogado.Image = Properties.Resources.led_verde;
+                Globais.nivel = int.Parse(dt.Rows[0].Field<Int64>("N_NIVELUSUSARIO").ToString());
+                Globais.logado = true;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuário não encontado");
+                tb_username.Clear();
+                tb_senha.Clear();
+                tb_username.Focus();
             }
 
 
