@@ -14,10 +14,12 @@ namespace Componentes
     public partial class F_Principal : Form
     {
         public int num;
+
         public F_Principal()
         {
             InitializeComponent();
             num = 0;
+            
         }
 
         private void F_Principal_Load(object sender, EventArgs e)
@@ -200,6 +202,41 @@ namespace Componentes
         {
             F_TabControl tb = new F_TabControl();
             tb.ShowDialog();
+        }
+
+        private void tableLayoutPanelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_TableLayoutPanel tlp = new F_TableLayoutPanel();
+            tlp.ShowDialog();
+        }
+
+        private void toolStripContainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_ToolStripContainer tsc = new F_ToolStripContainer();
+            tsc.ShowDialog();
+        }
+
+        private void baclgroudWorkerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BackgroudWorker bw = new F_BackgroudWorker();
+            bw.ShowDialog();
+        }
+
+        private void timerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Timer t = new F_Timer();
+            t.ShowDialog();
+        }
+
+        private void sQLiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sQLiteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            F_SQLite f_SQLite = new F_SQLite();
+            f_SQLite.ShowDialog();
         }
     }
 }

@@ -42,5 +42,10 @@ namespace Componentes
         {
             pictureBox1.Image = Properties.Resources.eu;
         }
+
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+        }
     }
 }
