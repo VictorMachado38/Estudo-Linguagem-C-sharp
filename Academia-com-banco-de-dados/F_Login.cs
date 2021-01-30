@@ -17,6 +17,7 @@ namespace Academia_com_banco_de_dados
         public F_Login(Form1 f)
         {
             InitializeComponent();
+            tb_username.Focus();
             form1 = f;
 
         }
@@ -29,13 +30,13 @@ namespace Academia_com_banco_de_dados
             if(usermanse == "")
             {
                 MessageBox.Show("Usuario invalido");
-                lb_usarmane.Focus();
+                tb_username.Focus();
                 return;
             }
             if (senha == "")
             {
                 MessageBox.Show("Senha invalida");
-                tb_senha.Focus();
+                //tb_senha.Focus();
                 return;
             }
 
@@ -65,6 +66,34 @@ namespace Academia_com_banco_de_dados
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+            //form1.Close();
+        }
+
+        private void F_Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void btn_logar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) 
+            { 
+
+             //  MessageBox.Show("Você apertou a tecla enter");
+
+                // tb_senha.Focus();
+            }
+        }
+
+        private void tb_senha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+
+            //    MessageBox.Show("Você apertou a tecla enter");
+                               // tb_senha.Focus();
+            }
+
         }
     }
 }

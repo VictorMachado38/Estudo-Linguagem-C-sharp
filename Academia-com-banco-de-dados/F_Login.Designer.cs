@@ -59,18 +59,20 @@ namespace Academia_com_banco_de_dados
             // 
             // tb_senha
             // 
-            this.tb_senha.Location = new System.Drawing.Point(31, 107);
+            this.tb_senha.Location = new System.Drawing.Point(35, 107);
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(138, 20);
             this.tb_senha.TabIndex = 2;
+            this.tb_senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_senha_KeyPress);
             // 
             // tb_username
             // 
-            this.tb_username.Location = new System.Drawing.Point(34, 45);
+            this.tb_username.Location = new System.Drawing.Point(34, 44);
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(138, 20);
             this.tb_username.TabIndex = 3;
+            this.tb_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_logar_KeyPress);
             // 
             // btn_logar
             // 
@@ -83,6 +85,7 @@ namespace Academia_com_banco_de_dados
             this.btn_logar.Text = "Logar";
             this.btn_logar.UseVisualStyleBackColor = false;
             this.btn_logar.Click += new System.EventHandler(this.btn_logar_Click);
+            this.btn_logar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_logar_KeyPress);
             // 
             // btn_cancelar
             // 
@@ -112,6 +115,7 @@ namespace Academia_com_banco_de_dados
             this.Name = "F_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.F_Login_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
