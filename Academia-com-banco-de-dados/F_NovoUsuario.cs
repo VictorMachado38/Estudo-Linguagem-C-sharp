@@ -25,6 +25,14 @@ namespace Academia_com_banco_de_dados
             usuario.senha = tb_senha.Text;
             usuario.status = cb_status.Text;
             usuario.nivel = Convert.ToInt32(Math.Round(nud_nivel.Value,0));
+            //  MessageBox.Show("fd");
+
+            Banco.NovoUsuario(usuario);
+        }
+
+        private void F_NovoUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

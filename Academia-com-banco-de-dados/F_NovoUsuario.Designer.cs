@@ -246,6 +246,7 @@ namespace Academia_com_banco_de_dados
             this.Name = "F_NovoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Usuário";
+            this.Load += new System.EventHandler(this.F_NovoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivel)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
