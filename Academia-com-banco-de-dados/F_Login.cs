@@ -18,6 +18,7 @@ namespace Academia_com_banco_de_dados
         {
             InitializeComponent();
             tb_username.Focus();
+            //btn_logar.Focus();
             form1 = f;
 
         }
@@ -41,7 +42,7 @@ namespace Academia_com_banco_de_dados
             }
 
             string sql = "SELECT * FROM tb_usuarios WHERE T_USERNAME='"+ usermanse+"'AND T_SENHAUSUARIO='"+senha+"'";
-            MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+sql);
+          //  MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+sql);
             dt = Banco.consulta(sql);
             if(dt.Rows.Count == 1)
             {
@@ -72,6 +73,7 @@ namespace Academia_com_banco_de_dados
         private void F_Login_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+
         }
 
         private void btn_logar_KeyPress(object sender, KeyPressEventArgs e)
@@ -93,6 +95,11 @@ namespace Academia_com_banco_de_dados
             //    MessageBox.Show("Você apertou a tecla enter");
                                // tb_senha.Focus();
             }
+
+        }
+
+        private void F_Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

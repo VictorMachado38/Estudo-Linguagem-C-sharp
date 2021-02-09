@@ -61,7 +61,8 @@ namespace Academia_com_banco_de_dados
             {
                 if (Globais.nivel >= 1)
                 {
-
+                    F_NovoUsuario f_NovoUsuario = new F_NovoUsuario();
+                    f_NovoUsuario.ShowDialog();
                 }
                 else
                 {

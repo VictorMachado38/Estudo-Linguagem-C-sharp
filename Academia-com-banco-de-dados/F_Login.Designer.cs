@@ -64,6 +64,7 @@ namespace Academia_com_banco_de_dados
             this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(138, 20);
             this.tb_senha.TabIndex = 2;
+            this.tb_senha.Text = "123";
             this.tb_senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_senha_KeyPress);
             // 
             // tb_username
@@ -72,6 +73,7 @@ namespace Academia_com_banco_de_dados
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(138, 20);
             this.tb_username.TabIndex = 3;
+            this.tb_username.Text = "master";
             this.tb_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_logar_KeyPress);
             // 
             // btn_logar
@@ -115,6 +117,7 @@ namespace Academia_com_banco_de_dados
             this.Name = "F_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.F_Login_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.F_Login_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
