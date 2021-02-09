@@ -78,11 +78,11 @@ namespace Academia_com_banco_de_dados
             // 
             // btn_logar
             // 
-            this.btn_logar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_logar.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logar.Location = new System.Drawing.Point(34, 146);
+            this.btn_logar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_logar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logar.Location = new System.Drawing.Point(34, 147);
             this.btn_logar.Name = "btn_logar";
-            this.btn_logar.Size = new System.Drawing.Size(138, 24);
+            this.btn_logar.Size = new System.Drawing.Size(139, 37);
             this.btn_logar.TabIndex = 4;
             this.btn_logar.Text = "Logar";
             this.btn_logar.UseVisualStyleBackColor = false;
@@ -91,11 +91,11 @@ namespace Academia_com_banco_de_dados
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.btn_cancelar.Font = new System.Drawing.Font("Myanmar Text", 9.75F);
-            this.btn_cancelar.Location = new System.Drawing.Point(34, 176);
+            this.btn_cancelar.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_cancelar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.Location = new System.Drawing.Point(35, 190);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(138, 24);
+            this.btn_cancelar.Size = new System.Drawing.Size(139, 37);
             this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;

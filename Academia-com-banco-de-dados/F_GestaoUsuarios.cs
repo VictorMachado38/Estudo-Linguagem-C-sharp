@@ -16,5 +16,10 @@ namespace Academia_com_banco_de_dados
         {
             InitializeComponent();
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
