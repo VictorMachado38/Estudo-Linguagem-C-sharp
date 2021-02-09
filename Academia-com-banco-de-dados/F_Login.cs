@@ -48,7 +48,7 @@ namespace Academia_com_banco_de_dados
                 form1.lb_acesso.Text = dt.Rows[0].ItemArray[5].ToString();
                 form1.lb_nomeUsuario.Text = dt.Rows[0].Field<string>("T_NOMEUSUSARIO");
                 form1.pb_ledLogado.Image = Properties.Resources.led_verde;
-                Globais.nivel = int.Parse(dt.Rows[0].Field<Int64>("N_NIVELUSUSARIO").ToString());
+                Globais.nivel = int.Parse(dt.Rows[0].Field<Int64>("N_NIVELUSUARIO").ToString());
                 Globais.logado = true;
                 this.Close();
             }

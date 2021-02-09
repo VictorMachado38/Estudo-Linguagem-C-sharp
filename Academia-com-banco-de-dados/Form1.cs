@@ -35,5 +35,74 @@ namespace Academia_com_banco_de_dados
             Globais.nivel = 0;
             Globais.logado = false;
         }
+
+        private void bancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if(Globais.nivel >= 2)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("É necessario quer nivel minimo 2");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessario ter um usuário logado");
+            }
+        }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel >= 1)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("É necessario quer nivel minimo 1");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessario ter um usuário logado");
+            }
+        }
+
+        private void gestãoDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel >= 1)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("É necessario quer nivel minimo 1");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessario ter um usuário logado");
+            }
+        }
+
+        private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                //Procedimentos
+            }
+            else
+            {
+                MessageBox.Show("É necessario ter um usuário logado");
+            }
+        }
     }
 }
