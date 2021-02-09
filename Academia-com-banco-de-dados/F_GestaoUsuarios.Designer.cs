@@ -29,6 +29,7 @@ namespace Academia_com_banco_de_dados
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -104,7 +105,7 @@ namespace Academia_com_banco_de_dados
             // 
             this.nud_nivel.Location = new System.Drawing.Point(144, 192);
             this.nud_nivel.Maximum = new decimal(new int[] {
-            2,
+            3,
             0,
             0,
             0});
@@ -205,11 +206,24 @@ namespace Academia_com_banco_de_dados
             // 
             // dgv_usuario
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuario.EnableHeadersVisualStyles = false;
             this.dgv_usuario.Location = new System.Drawing.Point(284, 10);
+            this.dgv_usuario.MultiSelect = false;
             this.dgv_usuario.Name = "dgv_usuario";
+            this.dgv_usuario.RowHeadersVisible = false;
+            this.dgv_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_usuario.Size = new System.Drawing.Size(377, 276);
             this.dgv_usuario.TabIndex = 29;
+            this.dgv_usuario.SelectionChanged += new System.EventHandler(this.dgv_usuario_SelectionChanged);
             // 
             // btn_novoUsuario
             // 
@@ -279,6 +293,7 @@ namespace Academia_com_banco_de_dados
             this.Name = "F_GestaoUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Usuarios";
+            this.Load += new System.EventHandler(this.F_GestaoUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivel)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).EndInit();

@@ -21,5 +21,34 @@ namespace Academia_com_banco_de_dados
         {
             Close();
         }
+
+        private void F_GestaoUsuarios_Load(object sender, EventArgs e)
+        {
+            dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
+            dgv_usuario.Columns[0].Width = 70;
+            dgv_usuario.Columns[1].Width = 280;
+            //dgv_usuario.Columns[2].Width = 100;
+        }
+
+        private void dgv_usuario_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            int contLinhas = dgv.SelectedRows.Count;
+            if(contLinhas > 0)
+            {
+                DataTable dt = new DataTable();
+                String vid = dgv.SelectedRows[0].Cells[0].Value.ToString();
+               // MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM " + vid);
+                dt = Banco.ObterDadosUsuario(vid);
+                tb_id.Text = dt.Rows[0].Field < Int64 > ("N_IDUSUARIO").ToString();
+                tb_nome.Text = dt.Rows[0].Field<string>("T_NOMEUSUSARIO").ToString();
+                tb_username.Text = dt.Rows[0].Field<string>("T_USERNAME").ToString();
+                tb_senha.Text = dt.Rows[0].Field<string>("T_SENHAUSUARIO").ToString();
+                cb_status.Text = dt.Rows[0].Field<string>("T_STATUSUSUARIO").ToString();
+                nud_nivel.Value = dt.Rows[0].Field<Int64>("N_NIVELUSUARIO");
+
+            }
+            
+        }
     }
 }

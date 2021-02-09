@@ -27,19 +27,18 @@ namespace Academia_com_banco_de_dados
             DataTable dt = new DataTable();
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand()) 
-                {
-                    cmd.CommandText = "SELECT * FROM tb_usuarios";
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+                
             }
             catch (Exception ex)
             {
-                ConexaoBanco().Close();
-                throw ex;
+               throw ex;
             }
             
         }
@@ -51,14 +50,14 @@ namespace Academia_com_banco_de_dados
             DataTable dt = new DataTable();
             try
             {
-                using (var cmd = ConexaoBanco().CreateCommand())
-                {
-                    cmd.CommandText = sql;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                    da.Fill(dt);
-                    ConexaoBanco().Close();
-                    return dt;
-                }
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = sql;
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+                
             }
             catch (Exception ex)
             {
@@ -66,6 +65,52 @@ namespace Academia_com_banco_de_dados
             }
         }
 
+
+        ///FUNÇÕES do FORM F_GrestaoUsuarios
+
+        public static DataTable ObterUsuariosIdNome()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUSARIO as 'Nome Usuário' FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public static DataTable ObterDadosUsuario(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios WHERE N_IDUSUARIO ="+id;
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         /////// Fonções do FORM F_NovoUsuario
 
         public static void NovoUsuario(Usuario u)
@@ -78,6 +123,7 @@ namespace Academia_com_banco_de_dados
             }
                 try
                 {
+                    var vcon = ConexaoBanco();
                     var cmd = ConexaoBanco().CreateCommand();
                     cmd.CommandText = "INSERT INTO tb_usuarios (T_NOMEUSUSARIO,T_USERNAME,T_SENHAUSUARIO,T_STATUSUSUARIO,N_NIVELUSUARIO) VALUES(@nome,@username,@senha,@status,@nivel)";
                     cmd.Parameters.AddWithValue("@nome", u.nome);
@@ -87,20 +133,19 @@ namespace Academia_com_banco_de_dados
                     cmd.Parameters.AddWithValue("@nivel", u.nivel);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Novo usuário inserido com sucesso");
-                    ConexaoBanco().Close();
+                    vcon.Close();
                 }
                 catch(Exception e)
                 {
                       MessageBox.Show("Erro ao gravar novos usuarios");
-                      ConexaoBanco().Close();
-
+                      
                 }
 
         }
         
         ///FIM - Funções do FORM F_NovoUsuario
         
-        ///Rotinas Gerais]
+        ///Rotinas Gerais
         
         public static bool existeUsername(Usuario u)
         {
@@ -109,7 +154,8 @@ namespace Academia_com_banco_de_dados
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
 
-            var cmd = ConexaoBanco().CreateCommand();
+            var vcon = ConexaoBanco();
+            var cmd = vcon.CreateCommand();
             cmd.CommandText = "SELECT T_USERNAME FROM tb_usuarios WHERE T_USERNAME='"+u.username+"'";
             da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
             da.Fill(dt);
@@ -121,6 +167,7 @@ namespace Academia_com_banco_de_dados
             {
                 res = false;
             }
+            vcon.Close();
 
             return res;
         }
