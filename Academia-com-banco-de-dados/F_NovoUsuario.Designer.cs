@@ -87,6 +87,7 @@ namespace Academia_com_banco_de_dados
             // 
             this.tb_senha.Location = new System.Drawing.Point(436, 33);
             this.tb_senha.Name = "tb_senha";
+            this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(126, 20);
             this.tb_senha.TabIndex = 5;
             // 
@@ -177,7 +178,7 @@ namespace Academia_com_banco_de_dados
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(663, 44);
+            this.panel1.Size = new System.Drawing.Size(631, 44);
             this.panel1.TabIndex = 13;
             // 
             // btn_novo
@@ -189,6 +190,7 @@ namespace Academia_com_banco_de_dados
             this.btn_novo.TabIndex = 0;
             this.btn_novo.Text = "Novo";
             this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // btn_salval
             // 
@@ -199,7 +201,6 @@ namespace Academia_com_banco_de_dados
             this.btn_salval.TabIndex = 1;
             this.btn_salval.Text = "Salvar";
             this.btn_salval.UseVisualStyleBackColor = true;
-            this.btn_salval.Click += new System.EventHandler(this.btn_salval_Click);
             // 
             // btn_calcelar
             // 
@@ -210,22 +211,24 @@ namespace Academia_com_banco_de_dados
             this.btn_calcelar.TabIndex = 2;
             this.btn_calcelar.Text = "Calcelar";
             this.btn_calcelar.UseVisualStyleBackColor = true;
+            this.btn_calcelar.Click += new System.EventHandler(this.btn_calcelar_Click);
             // 
             // btn_fechar
             // 
             this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(685, 9);
+            this.btn_fechar.Location = new System.Drawing.Point(518, 9);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(103, 26);
             this.btn_fechar.TabIndex = 3;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // F_NovoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 232);
+            this.ClientSize = new System.Drawing.Size(631, 232);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -246,7 +249,6 @@ namespace Academia_com_banco_de_dados
             this.Name = "F_NovoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Usuário";
-            this.Load += new System.EventHandler(this.F_NovoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivel)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

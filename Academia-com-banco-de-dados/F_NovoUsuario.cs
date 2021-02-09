@@ -30,8 +30,29 @@ namespace Academia_com_banco_de_dados
             Banco.NovoUsuario(usuario);
         }
 
-        private void F_NovoUsuario_Load(object sender, EventArgs e)
+        private void btn_fechar_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void btn_calcelar_Click(object sender, EventArgs e)
+        {
+            tb_nome.Clear();
+            tb_senha.Clear();
+            tb_username.Clear();
+            cb_status.Text = "";
+            nud_nivel.Value = 0;
+            tb_nome.Focus();
+        }
+
+        private void btn_novo_Click(object sender, EventArgs e)
+        {
+            tb_nome.Clear();
+            tb_senha.Clear();
+            tb_username.Clear();
+            cb_status.Text = "";
+            nud_nivel.Value = 0;
+            tb_nome.Focus();
 
         }
     }
