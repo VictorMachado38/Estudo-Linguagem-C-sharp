@@ -49,7 +49,7 @@ namespace Academia_com_banco_de_dados
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
             try
-            {
+            {                
                 var vcon = ConexaoBanco();
                 var cmd = ConexaoBanco().CreateCommand();
                 cmd.CommandText = sql;

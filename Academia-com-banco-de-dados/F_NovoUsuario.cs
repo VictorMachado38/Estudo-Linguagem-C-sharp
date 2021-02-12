@@ -55,5 +55,17 @@ namespace Academia_com_banco_de_dados
             tb_nome.Focus();
 
         }
+
+        private void btn_salval_Click_1(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.nome = tb_nome.Text;
+            usuario.username = tb_username.Text;
+            usuario.senha = tb_senha.Text;
+            usuario.status = cb_status.Text;
+            usuario.nivel = Convert.ToInt32(Math.Round(nud_nivel.Value, 0));
+
+            Banco.NovoUsuario(usuario);
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Academia_com_banco_de_dados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,11 +46,11 @@ namespace Academia_com_banco_de_dados
             this.tb_id = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_usuario = new System.Windows.Forms.DataGridView();
-            this.btn_novoUsuario = new System.Windows.Forms.Button();
-            this.btn_salvalAlteracoes = new System.Windows.Forms.Button();
-            this.btn_excluirUsuario = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_excluirUsuario = new System.Windows.Forms.Button();
+            this.btn_salvalAlteracoes = new System.Windows.Forms.Button();
+            this.btn_novoUsuario = new System.Windows.Forms.Button();
+            this.dgv_usuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).BeginInit();
@@ -181,6 +181,7 @@ namespace Academia_com_banco_de_dados
             this.tb_id.ReadOnly = true;
             this.tb_id.Size = new System.Drawing.Size(126, 20);
             this.tb_id.TabIndex = 27;
+            this.tb_id.TextChanged += new System.EventHandler(this.tb_id_TextChanged);
             // 
             // label9
             // 
@@ -204,46 +205,16 @@ namespace Academia_com_banco_de_dados
             this.panel1.Size = new System.Drawing.Size(668, 45);
             this.panel1.TabIndex = 28;
             // 
-            // dgv_usuario
+            // btn_fechar
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuario.EnableHeadersVisualStyles = false;
-            this.dgv_usuario.Location = new System.Drawing.Point(284, 10);
-            this.dgv_usuario.MultiSelect = false;
-            this.dgv_usuario.Name = "dgv_usuario";
-            this.dgv_usuario.RowHeadersVisible = false;
-            this.dgv_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_usuario.Size = new System.Drawing.Size(377, 276);
-            this.dgv_usuario.TabIndex = 29;
-            this.dgv_usuario.SelectionChanged += new System.EventHandler(this.dgv_usuario_SelectionChanged);
-            // 
-            // btn_novoUsuario
-            // 
-            this.btn_novoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novoUsuario.Location = new System.Drawing.Point(22, 10);
-            this.btn_novoUsuario.Name = "btn_novoUsuario";
-            this.btn_novoUsuario.Size = new System.Drawing.Size(145, 26);
-            this.btn_novoUsuario.TabIndex = 0;
-            this.btn_novoUsuario.Text = "Novo Usuário";
-            this.btn_novoUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btn_salvalAlteracoes
-            // 
-            this.btn_salvalAlteracoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salvalAlteracoes.Location = new System.Drawing.Point(177, 10);
-            this.btn_salvalAlteracoes.Name = "btn_salvalAlteracoes";
-            this.btn_salvalAlteracoes.Size = new System.Drawing.Size(145, 26);
-            this.btn_salvalAlteracoes.TabIndex = 1;
-            this.btn_salvalAlteracoes.Text = "Salvar Alterações";
-            this.btn_salvalAlteracoes.UseVisualStyleBackColor = true;
+            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fechar.Location = new System.Drawing.Point(487, 9);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(145, 26);
+            this.btn_fechar.TabIndex = 3;
+            this.btn_fechar.Text = "Fechar Janela";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_excluirUsuario
             // 
@@ -255,16 +226,47 @@ namespace Academia_com_banco_de_dados
             this.btn_excluirUsuario.Text = "Excluir Usuário";
             this.btn_excluirUsuario.UseVisualStyleBackColor = true;
             // 
-            // btn_fechar
+            // btn_salvalAlteracoes
             // 
-            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(487, 9);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(145, 26);
-            this.btn_fechar.TabIndex = 3;
-            this.btn_fechar.Text = "Fechar Janela";
-            this.btn_fechar.UseVisualStyleBackColor = true;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            this.btn_salvalAlteracoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salvalAlteracoes.Location = new System.Drawing.Point(177, 10);
+            this.btn_salvalAlteracoes.Name = "btn_salvalAlteracoes";
+            this.btn_salvalAlteracoes.Size = new System.Drawing.Size(145, 26);
+            this.btn_salvalAlteracoes.TabIndex = 1;
+            this.btn_salvalAlteracoes.Text = "Salvar Alterações";
+            this.btn_salvalAlteracoes.UseVisualStyleBackColor = true;
+            this.btn_salvalAlteracoes.Click += new System.EventHandler(this.btn_salvalAlteracoes_Click);
+            // 
+            // btn_novoUsuario
+            // 
+            this.btn_novoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novoUsuario.Location = new System.Drawing.Point(22, 10);
+            this.btn_novoUsuario.Name = "btn_novoUsuario";
+            this.btn_novoUsuario.Size = new System.Drawing.Size(145, 26);
+            this.btn_novoUsuario.TabIndex = 0;
+            this.btn_novoUsuario.Text = "Novo Usuário";
+            this.btn_novoUsuario.UseVisualStyleBackColor = true;
+            // 
+            // dgv_usuario
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuario.EnableHeadersVisualStyles = false;
+            this.dgv_usuario.Location = new System.Drawing.Point(284, 10);
+            this.dgv_usuario.MultiSelect = false;
+            this.dgv_usuario.Name = "dgv_usuario";
+            this.dgv_usuario.RowHeadersVisible = false;
+            this.dgv_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_usuario.Size = new System.Drawing.Size(377, 276);
+            this.dgv_usuario.TabIndex = 29;
+            this.dgv_usuario.SelectionChanged += new System.EventHandler(this.dgv_usuario_SelectionChanged);
             // 
             // F_GestaoUsuarios
             // 

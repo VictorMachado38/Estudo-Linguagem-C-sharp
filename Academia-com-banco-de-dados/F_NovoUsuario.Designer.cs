@@ -43,10 +43,10 @@ namespace Academia_com_banco_de_dados
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_novo = new System.Windows.Forms.Button();
-            this.btn_salval = new System.Windows.Forms.Button();
-            this.btn_calcelar = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_calcelar = new System.Windows.Forms.Button();
+            this.btn_salval = new System.Windows.Forms.Button();
+            this.btn_novo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -181,26 +181,16 @@ namespace Academia_com_banco_de_dados
             this.panel1.Size = new System.Drawing.Size(631, 44);
             this.panel1.TabIndex = 13;
             // 
-            // btn_novo
+            // btn_fechar
             // 
-            this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novo.Location = new System.Drawing.Point(7, 9);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(103, 26);
-            this.btn_novo.TabIndex = 0;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
-            // 
-            // btn_salval
-            // 
-            this.btn_salval.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salval.Location = new System.Drawing.Point(115, 9);
-            this.btn_salval.Name = "btn_salval";
-            this.btn_salval.Size = new System.Drawing.Size(103, 26);
-            this.btn_salval.TabIndex = 1;
-            this.btn_salval.Text = "Salvar";
-            this.btn_salval.UseVisualStyleBackColor = true;
+            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fechar.Location = new System.Drawing.Point(518, 9);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(103, 26);
+            this.btn_fechar.TabIndex = 3;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_calcelar
             // 
@@ -213,16 +203,27 @@ namespace Academia_com_banco_de_dados
             this.btn_calcelar.UseVisualStyleBackColor = true;
             this.btn_calcelar.Click += new System.EventHandler(this.btn_calcelar_Click);
             // 
-            // btn_fechar
+            // btn_salval
             // 
-            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(518, 9);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(103, 26);
-            this.btn_fechar.TabIndex = 3;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            this.btn_salval.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salval.Location = new System.Drawing.Point(115, 9);
+            this.btn_salval.Name = "btn_salval";
+            this.btn_salval.Size = new System.Drawing.Size(103, 26);
+            this.btn_salval.TabIndex = 1;
+            this.btn_salval.Text = "Salvar";
+            this.btn_salval.UseVisualStyleBackColor = true;
+            this.btn_salval.Click += new System.EventHandler(this.btn_salval_Click_1);
+            // 
+            // btn_novo
+            // 
+            this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_novo.Location = new System.Drawing.Point(7, 9);
+            this.btn_novo.Name = "btn_novo";
+            this.btn_novo.Size = new System.Drawing.Size(103, 26);
+            this.btn_novo.TabIndex = 0;
+            this.btn_novo.Text = "Novo";
+            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // F_NovoUsuario
             // 

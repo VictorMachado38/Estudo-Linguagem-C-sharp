@@ -50,5 +50,15 @@ namespace Academia_com_banco_de_dados
             }
             
         }
+
+        private void tb_id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_salvalAlteracoes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
