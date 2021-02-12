@@ -19,6 +19,7 @@ namespace Academia_com_banco_de_dados
             InitializeComponent();
             tb_username.Focus();
             //btn_logar.Focus();
+            //teste
             form1 = f;
 
         }
