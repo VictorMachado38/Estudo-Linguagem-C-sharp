@@ -59,7 +59,7 @@ namespace Academia_com_banco_de_dados
         private void btn_salvalAlteracoes_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
-           // usuario.nome = 
+           // usuario.nome = =
         }
 
         private void btn_novoUsuario_Click(object sender, EventArgs e)
