@@ -225,6 +225,7 @@ namespace Academia_com_banco_de_dados
             this.btn_excluirUsuario.TabIndex = 2;
             this.btn_excluirUsuario.Text = "Excluir Usuário";
             this.btn_excluirUsuario.UseVisualStyleBackColor = true;
+            this.btn_excluirUsuario.Click += new System.EventHandler(this.btn_excluirUsuario_Click);
             // 
             // btn_salvalAlteracoes
             // 

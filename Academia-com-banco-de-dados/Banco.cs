@@ -189,16 +189,35 @@ namespace Academia_com_banco_de_dados
             catch (Exception ex)
             {
                 throw ex;
-            }
-
-            /*
-             T_NOMEUSUARIO
-            T_USERNAME
-            T_SENHAUSUARIO
-            T_STATUSUSUARIO
-            N_NIVELUSUARIO
-             */
+            }                 
         }
 
+        /*
+            T_NOMEUSUARIO
+           T_USERNAME
+           T_SENHAUSUARIO
+           T_STATUSUSUARIO
+           N_NIVELUSUARIO
+            */
+
+        //função excluir usuario
+        public static void DeletarUsuario(String id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "DELETE FROM tb_usuarios WHERE N_IDUSUARIO = '"+id+"'";
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

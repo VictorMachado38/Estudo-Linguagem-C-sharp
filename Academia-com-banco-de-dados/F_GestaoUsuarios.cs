@@ -70,9 +70,13 @@ namespace Academia_com_banco_de_dados
             //  usuario.nivel = Convert.ToInt32(Math.Round(nud_nivel.Value,0));
 
             Banco.AtualizarUsuario(usuario);
-            dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
-            dgv_usuario.CurrentCell = dgv_usuario[0,linha];
-           
+            //dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
+            //dgv_usuario.CurrentCell = dgv_usuario[0,linha];
+           // dgv_usuario[0, linha].Value = tb_id.Text; ESSE NÃO PRECISA POIS ELE É FIXO
+            dgv_usuario[1, linha].Value = tb_nome.Text;
+
+
+
         }
 
         private void btn_novoUsuario_Click(object sender, EventArgs e)
@@ -82,5 +86,15 @@ namespace Academia_com_banco_de_dados
             dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
 
         }
+
+        private void btn_excluirUsuario_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Confirma exclusão ?","EXCLUIR! CUIDADO!!!!", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                Banco.DeletarUsuario(tb_id.Text);
+                dgv_usuario.Rows.Remove(dgv_usuario.CurrentRow);
+            }
+        } 
     }
 }
