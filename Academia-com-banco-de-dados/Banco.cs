@@ -107,6 +107,7 @@ namespace Academia_com_banco_de_dados
             }
             catch (Exception ex)
             {
+               
                 throw ex;
             }
 
@@ -172,7 +173,7 @@ namespace Academia_com_banco_de_dados
             return res;
         }
 
-        public static DataTable AtualizarUsuario()
+        public static void AtualizarUsuario(Usuario u)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -180,18 +181,23 @@ namespace Academia_com_banco_de_dados
             {
                 var vcon = ConexaoBanco();
                 var cmd = ConexaoBanco().CreateCommand();
-                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUARIO as 'Nome Usuário' FROM tb_usuarios";
-                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
-                da.Fill(dt);
+                cmd.CommandText = "UPDATE tb_usuarios SET T_NOMEUSUARIO ='"+u.nome+"',T_USERNAME = '"+u.username+"', T_SENHAUSUARIO = '"+u.senha+ "' ,T_STATUSUSUARIO = '" + u.status+"', N_NIVELUSUARIO = '"+u.nivel+"' WHERE N_IDUSUARIO = '"+u.id+"'";
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
                 vcon.Close();
-                return dt;
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
+            /*
+             T_NOMEUSUARIO
+            T_USERNAME
+            T_SENHAUSUARIO
+            T_STATUSUSUARIO
+            N_NIVELUSUARIO
+             */
         }
 
     }

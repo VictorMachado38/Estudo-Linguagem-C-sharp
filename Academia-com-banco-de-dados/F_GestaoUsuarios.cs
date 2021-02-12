@@ -58,8 +58,21 @@ namespace Academia_com_banco_de_dados
 
         private void btn_salvalAlteracoes_Click(object sender, EventArgs e)
         {
+            int linha = dgv_usuario.SelectedRows[0].Index;
+            MessageBox.Show("Esta retornando a linha de número: "+linha);
             Usuario usuario = new Usuario();
-           // usuario.nome = =
+            usuario.id = Convert.ToInt32(tb_id.Text);
+            usuario.nome = tb_nome.Text;
+            usuario.username = tb_senha.Text;
+            usuario.senha = tb_senha.Text;
+            usuario.status = cb_status.Text;
+            usuario.nivel = Convert.ToInt32(nud_nivel.Value);
+            //  usuario.nivel = Convert.ToInt32(Math.Round(nud_nivel.Value,0));
+
+            Banco.AtualizarUsuario(usuario);
+            dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
+            dgv_usuario.CurrentCell = dgv_usuario[0,linha];
+           
         }
 
         private void btn_novoUsuario_Click(object sender, EventArgs e)
