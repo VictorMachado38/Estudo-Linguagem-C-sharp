@@ -116,7 +116,7 @@ namespace Academia_com_banco_de_dados
             // 
             this.nud_nivel.Location = new System.Drawing.Point(161, 107);
             this.nud_nivel.Maximum = new decimal(new int[] {
-            2,
+            3,
             0,
             0,
             0});

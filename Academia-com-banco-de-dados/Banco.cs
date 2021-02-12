@@ -76,7 +76,7 @@ namespace Academia_com_banco_de_dados
             {
                 var vcon = ConexaoBanco();
                 var cmd = ConexaoBanco().CreateCommand();
-                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUSARIO as 'Nome Usuário' FROM tb_usuarios";
+                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUARIO as 'Nome Usuário' FROM tb_usuarios";
                 da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
                 da.Fill(dt);
                 vcon.Close();
@@ -125,7 +125,7 @@ namespace Academia_com_banco_de_dados
                 {
                     var vcon = ConexaoBanco();
                     var cmd = ConexaoBanco().CreateCommand();
-                    cmd.CommandText = "INSERT INTO tb_usuarios (T_NOMEUSUSARIO,T_USERNAME,T_SENHAUSUARIO,T_STATUSUSUARIO,N_NIVELUSUARIO) VALUES(@nome,@username,@senha,@status,@nivel)";
+                    cmd.CommandText = "INSERT INTO tb_usuarios (T_NOMEUSUARIO,T_USERNAME,T_SENHAUSUARIO,T_STATUSUSUARIO,N_NIVELUSUARIO) VALUES(@nome,@username,@senha,@status,@nivel)";
                     cmd.Parameters.AddWithValue("@nome", u.nome);
                     cmd.Parameters.AddWithValue("@username", u.username);
                     cmd.Parameters.AddWithValue("@senha", u.senha);
@@ -170,6 +170,28 @@ namespace Academia_com_banco_de_dados
             vcon.Close();
 
             return res;
+        }
+
+        public static DataTable AtualizarUsuario()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = "SELECT N_IDUSUARIO as 'ID Usuário',T_NOMEUSUARIO as 'Nome Usuário' FROM tb_usuarios";
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
     }

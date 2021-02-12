@@ -41,7 +41,7 @@ namespace Academia_com_banco_de_dados
                // MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM " + vid);
                 dt = Banco.ObterDadosUsuario(vid);
                 tb_id.Text = dt.Rows[0].Field < Int64 > ("N_IDUSUARIO").ToString();
-                tb_nome.Text = dt.Rows[0].Field<string>("T_NOMEUSUSARIO").ToString();
+                tb_nome.Text = dt.Rows[0].Field<string>("T_NOMEUSUARIO").ToString();
                 tb_username.Text = dt.Rows[0].Field<string>("T_USERNAME").ToString();
                 tb_senha.Text = dt.Rows[0].Field<string>("T_SENHAUSUARIO").ToString();
                 cb_status.Text = dt.Rows[0].Field<string>("T_STATUSUSUARIO").ToString();
@@ -58,6 +58,15 @@ namespace Academia_com_banco_de_dados
 
         private void btn_salvalAlteracoes_Click(object sender, EventArgs e)
         {
+            Usuario usuario = new Usuario();
+           // usuario.nome = 
+        }
+
+        private void btn_novoUsuario_Click(object sender, EventArgs e)
+        {
+            F_NovoUsuario f_NovoUsuario = new F_NovoUsuario();
+            f_NovoUsuario.ShowDialog();
+            dgv_usuario.DataSource = Banco.ObterUsuariosIdNome();
 
         }
     }
