@@ -44,7 +44,7 @@ namespace Academia_com_banco_de_dados
 
             string sql = "SELECT * FROM tb_usuarios WHERE T_USERNAME='"+ usermanse+"'AND T_SENHAUSUARIO='"+senha+"'";
           //  MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+sql);
-            dt = Banco.consulta(sql);
+            dt = Banco.dql(sql);
             if(dt.Rows.Count == 1)
             {
                 form1.lb_acesso.Text = dt.Rows[0].ItemArray[5].ToString();

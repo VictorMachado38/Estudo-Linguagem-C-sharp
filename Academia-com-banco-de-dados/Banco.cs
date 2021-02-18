@@ -13,7 +13,7 @@ namespace Academia_com_banco_de_dados
     {
         private static SQLiteConnection conexao;
         
-        
+        //Funções genericas
         private static SQLiteConnection ConexaoBanco()
         {
             conexao = new SQLiteConnection("Data Source ="+Globais.caminhoBanco+Globais.nomaBanco);
@@ -44,7 +44,7 @@ namespace Academia_com_banco_de_dados
             
         }
 
-        public static DataTable consulta(string sql)
+        public static DataTable dql(string sql)//Data Query Language (select)
         {
 
             SQLiteDataAdapter da = null;
@@ -62,6 +62,34 @@ namespace Academia_com_banco_de_dados
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+        }
+
+        public static void dml(string q, string msgOK=null, string msgERRO=null) //Data Manipulaton Language (Insert, Delete, Update)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = q;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+                if(msgOK != null)
+                {
+                    MessageBox.Show(msgOK);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if(msgERRO != null)
+                {
+                    MessageBox.Show(msgERRO+"\n"+ex.Message);
+                }
                 throw ex;
             }
         }
@@ -139,7 +167,7 @@ namespace Academia_com_banco_de_dados
                 }
                 catch(Exception e)
                 {
-                      MessageBox.Show("Erro ao gravar novos usuarios");
+                      MessageBox.Show("Erro ao gravar novos usuarios"+e);
                       
                 }
 
