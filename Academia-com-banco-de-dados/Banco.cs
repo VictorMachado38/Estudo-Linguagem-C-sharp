@@ -13,9 +13,10 @@ namespace Academia_com_banco_de_dados
     {
         private static SQLiteConnection conexao;
         
+        
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source = C:\\Users\\Machado\\Documents\\MeusProjetos\\Estudo-Linguagem-C-sharp\\Academia-com-banco-de-dados\\banco\\BD_Academia.db");
+            conexao = new SQLiteConnection("Data Source ="+Globais.caminhoBanco+Globais.nomaBanco);
             conexao.Open();
             return conexao;
             
