@@ -1,0 +1,18 @@
+SELECT 
+    tbt.N_IDTURMA as 'ID Turmas',
+    tbt.T_DSCTRUMA as 'Descrição da Turma',
+    tbh.T_DSCHORARIO as 'Hoário',
+    tbp.T_NOMEPROFESSOR as 'Professor',
+    tbt.N_MAXALUNOS as 'Max. alunos',
+    CASE
+        WHEN tbt.T_STATUS = 'A' THEN 'Ativa'
+        WHEN tbt.T_STATUS = 'B' THEN 'Paralisada'
+        WHEN tbt.T_STATUS = 'C' THEN 'Cancelada'
+    END as 'Status'
+    
+FROM
+    tb_turmas as tbt
+inner join 
+    tb_horarios as tbh on tbh.N_IDHORARIO = tbt.N_IDHORARIO,
+    tb_professores as tbp on tbp.ID_PROFESSOR = tbt.N_IDPROFESSOR
+    
