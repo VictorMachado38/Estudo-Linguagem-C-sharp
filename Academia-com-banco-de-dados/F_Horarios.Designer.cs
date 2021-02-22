@@ -82,45 +82,49 @@ namespace Academia_com_banco_de_dados
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 569);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 41);
+            this.panel1.Size = new System.Drawing.Size(442, 41);
             this.panel1.TabIndex = 4;
             // 
             // btn_fechar
             // 
             this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(453, 6);
+            this.btn_fechar.Location = new System.Drawing.Point(330, 6);
             this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(141, 30);
+            this.btn_fechar.Size = new System.Drawing.Size(100, 30);
             this.btn_fechar.TabIndex = 3;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_exluirHorario
             // 
-            this.btn_exluirHorario.Location = new System.Drawing.Point(306, 6);
+            this.btn_exluirHorario.Location = new System.Drawing.Point(224, 6);
             this.btn_exluirHorario.Name = "btn_exluirHorario";
-            this.btn_exluirHorario.Size = new System.Drawing.Size(141, 30);
+            this.btn_exluirHorario.Size = new System.Drawing.Size(100, 30);
             this.btn_exluirHorario.TabIndex = 2;
             this.btn_exluirHorario.Text = "Excluir Horário";
             this.btn_exluirHorario.UseVisualStyleBackColor = true;
+            this.btn_exluirHorario.Click += new System.EventHandler(this.btn_exluirHorario_Click);
             // 
             // btn_salvarHorario
             // 
-            this.btn_salvarHorario.Location = new System.Drawing.Point(159, 6);
+            this.btn_salvarHorario.Location = new System.Drawing.Point(118, 6);
             this.btn_salvarHorario.Name = "btn_salvarHorario";
-            this.btn_salvarHorario.Size = new System.Drawing.Size(141, 30);
+            this.btn_salvarHorario.Size = new System.Drawing.Size(100, 30);
             this.btn_salvarHorario.TabIndex = 1;
             this.btn_salvarHorario.Text = "Salvar Horário";
             this.btn_salvarHorario.UseVisualStyleBackColor = true;
+            this.btn_salvarHorario.Click += new System.EventHandler(this.btn_salvarHorario_Click);
             // 
             // btn_novoHorario
             // 
             this.btn_novoHorario.Location = new System.Drawing.Point(12, 6);
             this.btn_novoHorario.Name = "btn_novoHorario";
-            this.btn_novoHorario.Size = new System.Drawing.Size(141, 30);
+            this.btn_novoHorario.Size = new System.Drawing.Size(100, 30);
             this.btn_novoHorario.TabIndex = 0;
             this.btn_novoHorario.Text = "Novo Horário";
             this.btn_novoHorario.UseVisualStyleBackColor = true;
+            this.btn_novoHorario.Click += new System.EventHandler(this.btn_novoHorario_Click);
             // 
             // dgv_horarios
             // 
@@ -137,26 +141,29 @@ namespace Academia_com_banco_de_dados
             this.dgv_horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_horarios.EnableHeadersVisualStyles = false;
             this.dgv_horarios.Location = new System.Drawing.Point(15, 57);
+            this.dgv_horarios.MultiSelect = false;
             this.dgv_horarios.Name = "dgv_horarios";
             this.dgv_horarios.ReadOnly = true;
             this.dgv_horarios.RowHeadersVisible = false;
             this.dgv_horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_horarios.Size = new System.Drawing.Size(575, 504);
+            this.dgv_horarios.Size = new System.Drawing.Size(415, 499);
             this.dgv_horarios.TabIndex = 5;
+            this.dgv_horarios.SelectionChanged += new System.EventHandler(this.dgv_horarios_SelectionChanged);
             // 
             // mtb_dscHoario
             // 
             this.mtb_dscHoario.Location = new System.Drawing.Point(113, 31);
-            this.mtb_dscHoario.Mask = "99:99\\até 99:99";
+            this.mtb_dscHoario.Mask = "99:99 \\até 99:99";
             this.mtb_dscHoario.Name = "mtb_dscHoario";
             this.mtb_dscHoario.Size = new System.Drawing.Size(100, 20);
             this.mtb_dscHoario.TabIndex = 6;
+            this.mtb_dscHoario.ValidatingType = typeof(System.DateTime);
             // 
             // F_Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 610);
+            this.ClientSize = new System.Drawing.Size(442, 610);
             this.Controls.Add(this.mtb_dscHoario);
             this.Controls.Add(this.dgv_horarios);
             this.Controls.Add(this.panel1);

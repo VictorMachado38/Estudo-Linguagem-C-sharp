@@ -29,6 +29,7 @@ namespace Academia_com_banco_de_dados
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Login));
             this.lb_usarmane = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_senha = new System.Windows.Forms.TextBox();
@@ -112,6 +113,7 @@ namespace Academia_com_banco_de_dados
             this.Controls.Add(this.tb_senha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_usarmane);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_Login";
