@@ -30,6 +30,7 @@ namespace Academia_com_banco_de_dados
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_GestaoUsuarios));
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -268,6 +269,7 @@ namespace Academia_com_banco_de_dados
             this.dgv_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_usuario.Size = new System.Drawing.Size(377, 276);
             this.dgv_usuario.TabIndex = 29;
+            this.dgv_usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuario_CellContentClick);
             this.dgv_usuario.SelectionChanged += new System.EventHandler(this.dgv_usuario_SelectionChanged);
             // 
             // F_GestaoUsuarios
@@ -292,6 +294,7 @@ namespace Academia_com_banco_de_dados
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_nome);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_GestaoUsuarios";

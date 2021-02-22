@@ -95,6 +95,11 @@ namespace Academia_com_banco_de_dados
                 Banco.DeletarUsuario(tb_id.Text);
                 dgv_usuario.Rows.Remove(dgv_usuario.CurrentRow);
             }
-        } 
+        }
+
+        private void dgv_usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
