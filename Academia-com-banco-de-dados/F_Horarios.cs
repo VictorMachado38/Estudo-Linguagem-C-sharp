@@ -69,7 +69,7 @@ namespace Academia_com_banco_de_dados
             }
             else
             {
-                vquety = @"UPDATE tb_horarios SET T_DSCHORARIO = '"+ mtb_dscHoario.Text +"' WHERE N_IDHORARIO = "+tb_idHorario.Text;
+                vquety = @"UPDATE tb_horarios SET T_DSCHORARIO = '"+ mtb_dscHoario.Text +"'  WHERE N_IDHORARIO = "+tb_idHorario.Text;
             }
                         
             Banco.dml(vquety);
