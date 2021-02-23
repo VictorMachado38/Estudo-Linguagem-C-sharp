@@ -248,5 +248,42 @@ namespace Academia_com_banco_de_dados
                 throw ex;
             }
         }
+
+
+        public static DataTable atualizaProfessor()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = @"SELECT ID_PROFESSOR as 'ID Professor',T_NOMEPROFESSOR as 'Nome professor',T_TELEFONE as Telefone from tb_professores ORDER BY T_NOMEPROFESSOR DESC";
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        /*
+        public static void atualizaProfessor()
+        {
+            F_GestaoProfessores acesso = new F_GestaoProfessores();
+            string vquery;
+            vquery = @"SELECT ID_PROFESSOR as 'ID Professor',T_NOMEPROFESSOR as 'Nome professor',T_TELEFONE as Telefone from tb_professores";
+            
+            acesso.dgv_professores.DataSource = Banco.dql(vquery);
+        }
+        */
     }
+
+
+
+
 }

@@ -108,5 +108,11 @@ namespace Academia_com_banco_de_dados
             //NOVA ROTINA
             // f_horarios.ShowDialog();
         }
+
+        private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_GestaoProfessores f_GestaoProfessores = new F_GestaoProfessores();
+            f_GestaoProfessores.ShowDialog();
+        }
     }
 }
