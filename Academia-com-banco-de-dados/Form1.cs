@@ -112,7 +112,13 @@ namespace Academia_com_banco_de_dados
         private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             F_GestaoProfessores f_GestaoProfessores = new F_GestaoProfessores();
-            f_GestaoProfessores.ShowDialog();
+            abreForm(2, f_GestaoProfessores);
+        }
+
+        private void gestãoDeTurmasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_GestaoDeTurmas f_GestaoDeTurmas = new F_GestaoDeTurmas();
+            abreForm(3, f_GestaoDeTurmas);
         }
     }
 }
