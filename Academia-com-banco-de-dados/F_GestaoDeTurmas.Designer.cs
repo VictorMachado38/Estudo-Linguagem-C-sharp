@@ -29,14 +29,15 @@ namespace Academia_com_banco_de_dados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_GestaoDeTurmas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_turmas = new System.Windows.Forms.DataGridView();
+            this.btn_excluirHorario = new System.Windows.Forms.Button();
+            this.btn_fechar = new System.Windows.Forms.Button();
             this.btn_exluirTurma = new System.Windows.Forms.Button();
             this.btn_salvarSalvaredicoes = new System.Windows.Forms.Button();
             this.btn_novaTurma = new System.Windows.Forms.Button();
-            this.btn_excluirHorario = new System.Windows.Forms.Button();
+            this.dgv_turmas = new System.Windows.Forms.DataGridView();
             this.cb_professores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,8 @@ namespace Academia_com_banco_de_dados
             this.cb_horario = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.n_maxAlunos = new System.Windows.Forms.NumericUpDown();
-            this.btn_fechar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_nomeTurma = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).BeginInit();
@@ -64,28 +66,25 @@ namespace Academia_com_banco_de_dados
             this.panel1.Size = new System.Drawing.Size(742, 36);
             this.panel1.TabIndex = 0;
             // 
-            // dgv_turmas
+            // btn_excluirHorario
             // 
-            this.dgv_turmas.AllowUserToAddRows = false;
-            this.dgv_turmas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_turmas.EnableHeadersVisualStyles = false;
-            this.dgv_turmas.Location = new System.Drawing.Point(12, 12);
-            this.dgv_turmas.MultiSelect = false;
-            this.dgv_turmas.Name = "dgv_turmas";
-            this.dgv_turmas.ReadOnly = true;
-            this.dgv_turmas.RowHeadersVisible = false;
-            this.dgv_turmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_turmas.Size = new System.Drawing.Size(485, 477);
-            this.dgv_turmas.TabIndex = 11;
+            this.btn_excluirHorario.Location = new System.Drawing.Point(473, 4);
+            this.btn_excluirHorario.Name = "btn_excluirHorario";
+            this.btn_excluirHorario.Size = new System.Drawing.Size(150, 27);
+            this.btn_excluirHorario.TabIndex = 12;
+            this.btn_excluirHorario.Text = "Excluir Horário";
+            this.btn_excluirHorario.UseVisualStyleBackColor = true;
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fechar.BackgroundImage")));
+            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fechar.Location = new System.Drawing.Point(629, 4);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(105, 27);
+            this.btn_fechar.TabIndex = 11;
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_exluirTurma
             // 
@@ -114,19 +113,34 @@ namespace Academia_com_banco_de_dados
             this.btn_novaTurma.TabIndex = 8;
             this.btn_novaTurma.UseVisualStyleBackColor = true;
             // 
-            // btn_excluirHorario
+            // dgv_turmas
             // 
-            this.btn_excluirHorario.Location = new System.Drawing.Point(473, 4);
-            this.btn_excluirHorario.Name = "btn_excluirHorario";
-            this.btn_excluirHorario.Size = new System.Drawing.Size(150, 27);
-            this.btn_excluirHorario.TabIndex = 12;
-            this.btn_excluirHorario.Text = "Excluir Horário";
-            this.btn_excluirHorario.UseVisualStyleBackColor = true;
+            this.dgv_turmas.AllowUserToAddRows = false;
+            this.dgv_turmas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_turmas.EnableHeadersVisualStyles = false;
+            this.dgv_turmas.Location = new System.Drawing.Point(12, 12);
+            this.dgv_turmas.MultiSelect = false;
+            this.dgv_turmas.Name = "dgv_turmas";
+            this.dgv_turmas.ReadOnly = true;
+            this.dgv_turmas.RowHeadersVisible = false;
+            this.dgv_turmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_turmas.Size = new System.Drawing.Size(485, 477);
+            this.dgv_turmas.TabIndex = 1;
+            this.dgv_turmas.SelectionChanged += new System.EventHandler(this.dgv_turmas_SelectionChanged);
             // 
             // cb_professores
             // 
             this.cb_professores.FormattingEnabled = true;
-            this.cb_professores.Location = new System.Drawing.Point(513, 28);
+            this.cb_professores.Location = new System.Drawing.Point(506, 79);
             this.cb_professores.Name = "cb_professores";
             this.cb_professores.Size = new System.Drawing.Size(204, 21);
             this.cb_professores.TabIndex = 1;
@@ -134,7 +148,7 @@ namespace Academia_com_banco_de_dados
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(510, 12);
+            this.label1.Location = new System.Drawing.Point(503, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 13;
@@ -143,7 +157,7 @@ namespace Academia_com_banco_de_dados
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(510, 73);
+            this.label2.Location = new System.Drawing.Point(503, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 15;
@@ -152,7 +166,7 @@ namespace Academia_com_banco_de_dados
             // cb_status
             // 
             this.cb_status.FormattingEnabled = true;
-            this.cb_status.Location = new System.Drawing.Point(627, 88);
+            this.cb_status.Location = new System.Drawing.Point(620, 135);
             this.cb_status.Name = "cb_status";
             this.cb_status.Size = new System.Drawing.Size(90, 21);
             this.cb_status.TabIndex = 3;
@@ -160,7 +174,7 @@ namespace Academia_com_banco_de_dados
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(624, 72);
+            this.label3.Location = new System.Drawing.Point(617, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 17;
@@ -169,7 +183,7 @@ namespace Academia_com_banco_de_dados
             // cb_horario
             // 
             this.cb_horario.FormattingEnabled = true;
-            this.cb_horario.Location = new System.Drawing.Point(513, 158);
+            this.cb_horario.Location = new System.Drawing.Point(506, 192);
             this.cb_horario.Name = "cb_horario";
             this.cb_horario.Size = new System.Drawing.Size(204, 21);
             this.cb_horario.TabIndex = 4;
@@ -177,7 +191,7 @@ namespace Academia_com_banco_de_dados
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(503, 142);
+            this.label4.Location = new System.Drawing.Point(503, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 18;
@@ -185,27 +199,34 @@ namespace Academia_com_banco_de_dados
             // 
             // n_maxAlunos
             // 
-            this.n_maxAlunos.Location = new System.Drawing.Point(514, 89);
+            this.n_maxAlunos.Location = new System.Drawing.Point(507, 136);
             this.n_maxAlunos.Name = "n_maxAlunos";
             this.n_maxAlunos.Size = new System.Drawing.Size(90, 20);
             this.n_maxAlunos.TabIndex = 2;
             // 
-            // btn_fechar
+            // label5
             // 
-            this.btn_fechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fechar.BackgroundImage")));
-            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(629, 4);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(105, 27);
-            this.btn_fechar.TabIndex = 11;
-            this.btn_fechar.UseVisualStyleBackColor = true;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(503, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Nome Turma";
+            // 
+            // tb_nomeTurma
+            // 
+            this.tb_nomeTurma.Location = new System.Drawing.Point(507, 34);
+            this.tb_nomeTurma.Name = "tb_nomeTurma";
+            this.tb_nomeTurma.Size = new System.Drawing.Size(203, 20);
+            this.tb_nomeTurma.TabIndex = 20;
             // 
             // F_GestaoDeTurmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 528);
+            this.Controls.Add(this.tb_nomeTurma);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.n_maxAlunos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -249,5 +270,7 @@ namespace Academia_com_banco_de_dados
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown n_maxAlunos;
         private System.Windows.Forms.Button btn_fechar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_nomeTurma;
     }
 }

@@ -12,6 +12,7 @@ namespace Academia_com_banco_de_dados
 {
     public partial class F_GestaoDeTurmas : Form
     {
+        string idSelecionado;
         public F_GestaoDeTurmas()
         {
             InitializeComponent();
@@ -59,6 +60,11 @@ namespace Academia_com_banco_de_dados
             cb_horario.DisplayMember = "T_DSCHORARIO";
             cb_horario.ValueMember = "N_IDHORARIO";
 
+         
+            //Nome da turma
+
+
+
 
 
         }
@@ -66,6 +72,28 @@ namespace Academia_com_banco_de_dados
         private void btn_fechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgv_turmas_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            int count = dgv.SelectedRows.Count;
+            if (count > 0)
+            {
+                idSelecionado = dgv_turmas.Rows[dgv_turmas.SelectedRows[0].Index].Cells[0].Value.ToString();
+                string vqueryCampos = @"SELECT N_IDTURMA,N_IDPROFESSOR,N_IDHORARIO,N_MAXALUNOS,T_STATUS,T_DSCTURMA FROM tb_turmas WHERE N_IDTURMA =" + idSelecionado;
+                DataTable dt = Banco.dql(vqueryCampos);
+                cb_professores.SelectedValue = dt.Rows[0].Field<Int64>("N_IDPROFESSOR").ToString();
+                n_maxAlunos.Value = dt.Rows[0].Field<Int64>("N_MAXALUNOS");
+                cb_status.SelectedValue = dt.Rows[0].Field<string>("T_STATUS");
+                cb_horario.SelectedValue = dt.Rows[0].Field<Int64>("N_IDHORARIO").ToString();
+                tb_nomeTurma.Text = dt.Rows[0].Field<string>("T_DSCTURMA");
+
+            }
+            
+
+
+
         }
     }
 }

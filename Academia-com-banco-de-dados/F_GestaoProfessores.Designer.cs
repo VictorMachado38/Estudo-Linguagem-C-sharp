@@ -53,7 +53,7 @@ namespace Academia_com_banco_de_dados
             this.mtb_dscHoario.Mask = "(00) 00000-0000";
             this.mtb_dscHoario.Name = "mtb_dscHoario";
             this.mtb_dscHoario.Size = new System.Drawing.Size(100, 20);
-            this.mtb_dscHoario.TabIndex = 11;
+            this.mtb_dscHoario.TabIndex = 2;
             // 
             // dgv_professores
             // 
@@ -125,7 +125,7 @@ namespace Academia_com_banco_de_dados
             this.btn_fechar.Location = new System.Drawing.Point(339, 7);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(100, 30);
-            this.btn_fechar.TabIndex = 7;
+            this.btn_fechar.TabIndex = 6;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
             this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
@@ -135,8 +135,8 @@ namespace Academia_com_banco_de_dados
             this.btn_exluirHorario.Location = new System.Drawing.Point(230, 7);
             this.btn_exluirHorario.Name = "btn_exluirHorario";
             this.btn_exluirHorario.Size = new System.Drawing.Size(100, 30);
-            this.btn_exluirHorario.TabIndex = 6;
-            this.btn_exluirHorario.Text = "Excluir Horário";
+            this.btn_exluirHorario.TabIndex = 5;
+            this.btn_exluirHorario.Text = "Excluir Professor";
             this.btn_exluirHorario.UseVisualStyleBackColor = true;
             this.btn_exluirHorario.Click += new System.EventHandler(this.btn_exluirHorario_Click);
             // 
@@ -145,8 +145,8 @@ namespace Academia_com_banco_de_dados
             this.btn_salvarHorario.Location = new System.Drawing.Point(120, 7);
             this.btn_salvarHorario.Name = "btn_salvarHorario";
             this.btn_salvarHorario.Size = new System.Drawing.Size(100, 30);
-            this.btn_salvarHorario.TabIndex = 5;
-            this.btn_salvarHorario.Text = "Salvar Horário";
+            this.btn_salvarHorario.TabIndex = 4;
+            this.btn_salvarHorario.Text = "Salvar Professor";
             this.btn_salvarHorario.UseVisualStyleBackColor = true;
             this.btn_salvarHorario.Click += new System.EventHandler(this.btn_salvarHorario_Click);
             // 
@@ -155,8 +155,8 @@ namespace Academia_com_banco_de_dados
             this.btn_novoHorario.Location = new System.Drawing.Point(11, 7);
             this.btn_novoHorario.Name = "btn_novoHorario";
             this.btn_novoHorario.Size = new System.Drawing.Size(100, 30);
-            this.btn_novoHorario.TabIndex = 4;
-            this.btn_novoHorario.Text = "Novo Horário";
+            this.btn_novoHorario.TabIndex = 3;
+            this.btn_novoHorario.Text = "Novo Professor";
             this.btn_novoHorario.UseVisualStyleBackColor = true;
             this.btn_novoHorario.Click += new System.EventHandler(this.btn_novoHorario_Click);
             // 
@@ -174,7 +174,7 @@ namespace Academia_com_banco_de_dados
             this.tb_professores.Location = new System.Drawing.Point(90, 27);
             this.tb_professores.Name = "tb_professores";
             this.tb_professores.Size = new System.Drawing.Size(201, 20);
-            this.tb_professores.TabIndex = 14;
+            this.tb_professores.TabIndex = 1;
             // 
             // F_GestaoProfessores
             // 
