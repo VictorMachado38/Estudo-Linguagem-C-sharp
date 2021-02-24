@@ -73,32 +73,32 @@ namespace Academia_com_banco_de_dados
             this.tb_username.Location = new System.Drawing.Point(34, 44);
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(138, 20);
-            this.tb_username.TabIndex = 3;
+            this.tb_username.TabIndex = 1;
             this.tb_username.Text = "master";
             this.tb_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_logar_KeyPress);
             // 
             // btn_logar
             // 
-            this.btn_logar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_logar.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_logar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_logar.BackgroundImage")));
             this.btn_logar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logar.Location = new System.Drawing.Point(34, 147);
             this.btn_logar.Name = "btn_logar";
             this.btn_logar.Size = new System.Drawing.Size(139, 37);
-            this.btn_logar.TabIndex = 4;
-            this.btn_logar.Text = "Logar";
+            this.btn_logar.TabIndex = 3;
             this.btn_logar.UseVisualStyleBackColor = false;
             this.btn_logar.Click += new System.EventHandler(this.btn_logar_Click);
             this.btn_logar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_logar_KeyPress);
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_cancelar.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.BackgroundImage")));
             this.btn_cancelar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.Location = new System.Drawing.Point(35, 190);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(139, 37);
             this.btn_cancelar.TabIndex = 5;
-            this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 

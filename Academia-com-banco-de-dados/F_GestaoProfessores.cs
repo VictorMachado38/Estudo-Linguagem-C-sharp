@@ -66,6 +66,7 @@ namespace Academia_com_banco_de_dados
             tb_idProfessores.Clear();
             tb_professores.Clear();
             mtb_dscHoario.Clear();
+            tb_professores.Focus();
         }
 
         private void btn_exluirHorario_Click(object sender, EventArgs e)
