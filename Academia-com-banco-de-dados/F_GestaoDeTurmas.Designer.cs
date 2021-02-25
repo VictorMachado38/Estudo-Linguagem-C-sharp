@@ -30,7 +30,7 @@ namespace Academia_com_banco_de_dados
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_GestaoDeTurmas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_excluirHorario = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
@@ -48,6 +48,8 @@ namespace Academia_com_banco_de_dados
             this.n_maxAlunos = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_nomeTurma = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_vagas = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).BeginInit();
@@ -94,6 +96,7 @@ namespace Academia_com_banco_de_dados
             this.btn_exluirTurma.TabIndex = 10;
             this.btn_exluirTurma.Text = "Excluir Horário";
             this.btn_exluirTurma.UseVisualStyleBackColor = true;
+            this.btn_exluirTurma.Click += new System.EventHandler(this.btn_exluirTurma_Click);
             // 
             // btn_salvarSalvaredicoes
             // 
@@ -102,7 +105,9 @@ namespace Academia_com_banco_de_dados
             this.btn_salvarSalvaredicoes.Name = "btn_salvarSalvaredicoes";
             this.btn_salvarSalvaredicoes.Size = new System.Drawing.Size(150, 27);
             this.btn_salvarSalvaredicoes.TabIndex = 9;
+            this.btn_salvarSalvaredicoes.Text = "Salvar         Edições";
             this.btn_salvarSalvaredicoes.UseVisualStyleBackColor = true;
+            this.btn_salvarSalvaredicoes.Click += new System.EventHandler(this.btn_salvarSalvaredicoes_Click);
             // 
             // btn_novaTurma
             // 
@@ -112,19 +117,20 @@ namespace Academia_com_banco_de_dados
             this.btn_novaTurma.Size = new System.Drawing.Size(150, 27);
             this.btn_novaTurma.TabIndex = 8;
             this.btn_novaTurma.UseVisualStyleBackColor = true;
+            this.btn_novaTurma.Click += new System.EventHandler(this.btn_novaTurma_Click);
             // 
             // dgv_turmas
             // 
             this.dgv_turmas.AllowUserToAddRows = false;
             this.dgv_turmas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_turmas.EnableHeadersVisualStyles = false;
             this.dgv_turmas.Location = new System.Drawing.Point(12, 12);
@@ -220,11 +226,29 @@ namespace Academia_com_banco_de_dados
             this.tb_nomeTurma.Size = new System.Drawing.Size(203, 20);
             this.tb_nomeTurma.TabIndex = 20;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(507, 237);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Vagas";
+            // 
+            // tb_vagas
+            // 
+            this.tb_vagas.Location = new System.Drawing.Point(510, 257);
+            this.tb_vagas.Name = "tb_vagas";
+            this.tb_vagas.Size = new System.Drawing.Size(200, 20);
+            this.tb_vagas.TabIndex = 22;
+            // 
             // F_GestaoDeTurmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 528);
+            this.Controls.Add(this.tb_vagas);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_nomeTurma);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.n_maxAlunos);
@@ -272,5 +296,7 @@ namespace Academia_com_banco_de_dados
         private System.Windows.Forms.Button btn_fechar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_nomeTurma;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_vagas;
     }
 }
