@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Academia_com_banco_de_dados
 {
@@ -184,6 +188,46 @@ namespace Academia_com_banco_de_dados
           /*  DialogResult res = new DialogResult();
             res = ()
           */
+        }
+
+        private void btn_excluirHorario_Click(object sender, EventArgs e)
+        {
+            string nomeArquino = Globais.caminho + @"\turmas.pdf";
+            FileStream arquivoPDF = new FileStream(nomeArquino, FileMode.Create);
+            Document doc = new Document(PageSize.A4);
+            PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
+
+           
+            string dados = "";
+
+            Paragraph paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 25, (int)System.Drawing.FontStyle.Bold));
+
+            paragrafo1.Alignment = Element.ALIGN_CENTER;
+            paragrafo1.Add("Estudo PDF\n");
+            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL,14, (int)System.Drawing.FontStyle.Italic);
+            paragrafo1.Add("Curso em C#\n");
+            string texto = "Posso pgear o conteuso de um String tb";
+            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Italic);              
+            paragrafo1.Add(texto+"\n\n\n");
+
+
+            Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 25, (int)System.Drawing.FontStyle.Bold));
+
+            paragrafo2.Alignment = Element.ALIGN_LEFT;
+            paragrafo2.Add("Paragrago 2\n");            
+            string texto2 = "esse é o texto do segundo aparagrafo\n Loollllaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, (int)System.Drawing.FontStyle.Italic);
+            paragrafo2.Add(texto2+ "\n");
+
+            doc.Open();
+            doc.Add(paragrafo1);
+            doc.Add(paragrafo2);
+            doc.Close();
+
+
+
+
+
         }
     }
 }

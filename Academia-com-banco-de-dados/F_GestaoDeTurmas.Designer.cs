@@ -74,8 +74,9 @@ namespace Academia_com_banco_de_dados
             this.btn_excluirHorario.Name = "btn_excluirHorario";
             this.btn_excluirHorario.Size = new System.Drawing.Size(150, 27);
             this.btn_excluirHorario.TabIndex = 10;
-            this.btn_excluirHorario.Text = "Excluir Horário";
+            this.btn_excluirHorario.Text = "Imprimir Turma";
             this.btn_excluirHorario.UseVisualStyleBackColor = true;
+            this.btn_excluirHorario.Click += new System.EventHandler(this.btn_excluirHorario_Click);
             // 
             // btn_fechar
             // 
