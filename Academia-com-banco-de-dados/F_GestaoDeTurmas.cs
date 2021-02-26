@@ -81,6 +81,8 @@ namespace Academia_com_banco_de_dados
             int count = dgv.SelectedRows.Count;
             if (count > 0)
             {
+             
+                
                 modo = 1;
                 idSelecionado = dgv_turmas.Rows[dgv_turmas.SelectedRows[0].Index].Cells[0].Value.ToString();
                 string vqueryCampos = @"SELECT N_IDTURMA,N_IDPROFESSOR,N_IDHORARIO,N_MAXALUNOS,T_STATUS,T_DSCTURMA FROM tb_turmas WHERE N_IDTURMA =" + idSelecionado;
@@ -90,11 +92,23 @@ namespace Academia_com_banco_de_dados
                 cb_status.SelectedValue = dt.Rows[0].Field<string>("T_STATUS");
                 cb_horario.SelectedValue = dt.Rows[0].Field<Int64>("N_IDHORARIO").ToString();
                 tb_nomeTurma.Text = dt.Rows[0].Field<string>("T_DSCTURMA");
+                numeroVagas();
 
-            }
-            
+            }           
+        }
+
+        private void numeroVagas()
+        {
+            //Cálculo de vagas
+
+            string queryVagas = String.Format(@"
+                 SELECT  count(N_IDALUNOS) as 'contvagas' FROM tb_alunos WHERE T_STATUS = 'A' and N_IDTURMA = {0}", idSelecionado);
 
 
+            DataTable dt = Banco.dql(queryVagas);
+            int vagas = Int32.Parse(Math.Round(n_maxAlunos.Value, 0).ToString());
+            vagas -= Int32.Parse(dt.Rows[0].Field<Int64>("contvagas").ToString());
+            tb_vagas.Text = vagas.ToString();
 
         }
 
@@ -107,7 +121,9 @@ namespace Academia_com_banco_de_dados
             cb_horario.SelectedIndex = -1;
             cb_status.SelectedIndex = -1;
             tb_nomeTurma.Focus();
+            tb_vagas.Clear();
             modo = 2;
+            
 
         }
 
@@ -124,13 +140,16 @@ namespace Academia_com_banco_de_dados
                      UPDATE tb_turmas SET T_DSCTURMA = '{0}',N_IDPROFESSOR= {1},N_IDHORARIO = {2}, N_MAXALUNOS= '{3}',T_STATUS = '{4}' WHERE N_IDTURMA = {5}", tb_nomeTurma.Text,
                      cb_professores.SelectedValue, cb_horario.SelectedValue, Int32.Parse(Math.Round(n_maxAlunos.Value, 0).ToString()), cb_status.SelectedValue, idSelecionado);
                     // Banco.dml(queryAtualizarTurma);
+                    numeroVagas();
                 }
                 else
                 {
                     mgs = "Turma inserida";
                     queryAtualizarTurma = String.Format(@"INSERT INTO tb_turmas (T_DSCTURMA,N_IDPROFESSOR,N_IDHORARIO,N_MAXALUNOS,T_STATUS)  VALUES ('{0}',{1},{2},{3},'{4}')",tb_nomeTurma.Text,cb_professores.SelectedValue,cb_horario.SelectedValue, Int32.Parse(Math.Round(n_maxAlunos.Value, 0).ToString()),cb_status.SelectedValue);
                     MessageBox.Show("vai ser feito isso"+queryAtualizarTurma);
-                   
+                    numeroVagas();
+
+
                 }
 
 
@@ -138,7 +157,7 @@ namespace Academia_com_banco_de_dados
                 Banco.dml(queryAtualizarTurma);
                 dgv_turmas[1, linha].Value = tb_nomeTurma.Text;
                 dgv_turmas[2, linha].Value = cb_horario.Text;
-                if (modo == 2)
+               if (modo == 2)
                 {
                     string vquery = @"SELECT tbt.N_IDTURMA as 'ID' ,tbt.T_DSCTURMA as 'Turma',tbh.T_DSCHORARIO  as 'Horário da turma'
                 FROM tb_turmas as tbt
@@ -157,7 +176,7 @@ namespace Academia_com_banco_de_dados
             DialogResult res = MessageBox.Show("Confirma exclusão","Excluir?",MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
             {
-                string queryExcluirTurma = String.Format(@"DELETE FROM tb_turmas WHERE N_INDTURMA = {0}",idSelecionado);
+                string queryExcluirTurma = String.Format(@"DELETE FROM tb_turmas WHERE N_IDTURMA = {0}",idSelecionado);
                 Banco.dml(queryExcluirTurma);
                 dgv_turmas.Rows.Remove(dgv_turmas.CurrentRow);
             }

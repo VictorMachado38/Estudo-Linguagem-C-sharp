@@ -237,10 +237,13 @@ namespace Academia_com_banco_de_dados
             // 
             // tb_vagas
             // 
+            this.tb_vagas.Cursor = System.Windows.Forms.Cursors.No;
             this.tb_vagas.Location = new System.Drawing.Point(510, 257);
             this.tb_vagas.Name = "tb_vagas";
+            this.tb_vagas.ReadOnly = true;
             this.tb_vagas.Size = new System.Drawing.Size(200, 20);
-            this.tb_vagas.TabIndex = 6;
+            this.tb_vagas.TabIndex = 18;
+            this.tb_vagas.TabStop = false;
             // 
             // F_GestaoDeTurmas
             // 
