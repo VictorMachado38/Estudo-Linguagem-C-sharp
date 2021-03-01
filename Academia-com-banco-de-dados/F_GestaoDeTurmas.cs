@@ -199,12 +199,14 @@ namespace Academia_com_banco_de_dados
 
 
             //Inserindo uma imagem
-            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Globais.caminho + @"\logo.PNG");
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Globais.caminho + @"\logo1.PNG");
             logo.ScaleToFit(112, 96);
             
-            //um desses 
-            //logo.Alignment = Element.ALIGN_LEFT;
-            //ou
+            /*
+            um desses 
+            logo.Alignment = Element.ALIGN_LEFT;
+            ou
+            */
             logo.SetAbsolutePosition(35,720f); // X , -Y(com 0 ele fica na base da pagina)
 
             //Inserindo uma imagem*/
@@ -218,15 +220,15 @@ namespace Academia_com_banco_de_dados
             paragrafo1.Add("Estudo PDF\n");
             paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL,14, (int)System.Drawing.FontStyle.Italic);
             paragrafo1.Add("Curso em C#\n");
-            string texto = "Posso pgear o conteuso de um String tb";
-            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Italic);              
-            paragrafo1.Add(texto+"\n\n\n");
+            string texto = "\nRelatório de turmas";
+            paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 20, (int)System.Drawing.FontStyle.Bold);              
+            paragrafo1.Add(texto+"\n\n");
 
 
             Paragraph paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 25, (int)System.Drawing.FontStyle.Bold));
 
             paragrafo2.Alignment = Element.ALIGN_LEFT;
-            paragrafo2.Add("Paragrago 2\n");            
+            paragrafo2.Add("\n\nParagrago 2\n");            
             string texto2 = "esse é o texto do segundo aparagrafo\n Loollllaaaaaaaaaaaaaaaaaaaaaaaaaa.\n\n";
             paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, (int)System.Drawing.FontStyle.Italic);
             paragrafo2.Add(texto2+ "\n");
@@ -240,24 +242,33 @@ namespace Academia_com_banco_de_dados
 
             PdfPCell celula1 = new PdfPCell();
             celula1.Colspan = 3; //Linha 1 mescleda
-            celula1.AddElement(logo);
-            // celula.Rotation = 90;
-             celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+           // celula1.AddElement(logo);
+            celula1.HorizontalAlignment = Element.ALIGN_CENTER;
             celula1.VerticalAlignment = Element.ALIGN_CENTER;
-            //  logo.Alignment = Element.ALIGN_LEFT;
             celula1.HorizontalAlignment = Element.ALIGN_CENTER;
             
             tabela.AddCell(celula1);
 
 
 
-            tabela.AddCell("Arroz");
-            tabela.AddCell("Feijão");
-            tabela.AddCell("Batata");
+            tabela.AddCell("ID Turma");
+            tabela.AddCell("Turma");
+            tabela.AddCell("Horário");
 
-            tabela.AddCell("Mandioca");
-            tabela.AddCell("Jurubeba");
-            tabela.AddCell("Gatinho Feliz");
+            string vquery =  @"SELECT tbt.N_IDTURMA as 'ID' ,tbt.T_DSCTURMA as 'Turma',tbh.T_DSCHORARIO  as 'Horário da turma'
+                FROM tb_turmas as tbt
+                INNER JOIN
+                tb_horarios as tbh on tbh.N_IDHORARIO = tbt.N_IDHORARIO";
+
+            DataTable dtTurma = Banco.dql(vquery) ;
+            for(int i = 0; i < dtTurma.Rows.Count; i++)
+            {
+                tabela.AddCell(dtTurma.Rows[i].Field<Int64>("ID").ToString());
+                tabela.AddCell(dtTurma.Rows[i].Field<string>("Turma"));
+                tabela.AddCell(dtTurma.Rows[i].Field<string>("Horário da turma"));
+            }
+
+           
 
             PdfPCell celula2 = new PdfPCell(new Phrase("Tabela 2 AQUI!"));
             celula2.Colspan = 3; //Linha 1 mescla
@@ -265,15 +276,21 @@ namespace Academia_com_banco_de_dados
             celula2.Rotation = 0;
             celula2.HorizontalAlignment = Element.ALIGN_CENTER;
             celula2.VerticalAlignment = Element.ALIGN_MIDDLE;
-            tabela.AddCell(celula2);
+           // tabela.AddCell(celula2);
 
 
             doc.Open();
-            doc.Add(paragrafo1);
-            doc.Add(paragrafo2);
             doc.Add(logo);
+            doc.Add(paragrafo1);
             doc.Add(tabela);
+           // doc.Add(paragrafo2);
             doc.Close();
+
+            DialogResult res = MessageBox.Show("Desejsa abrir o Relatório", "Relatório", MessageBoxButtons.YesNo);
+            if( res == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(Globais.caminho + @"\turmas.pdf");
+            }
 
 
 
