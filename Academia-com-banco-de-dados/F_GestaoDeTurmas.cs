@@ -197,7 +197,19 @@ namespace Academia_com_banco_de_dados
             Document doc = new Document(PageSize.A4);
             PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
 
-           
+
+            //Inserindo uma imagem
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Globais.caminho + @"\logo.PNG");
+            logo.ScaleToFit(112, 96);
+            
+            //um desses 
+            //logo.Alignment = Element.ALIGN_LEFT;
+            //ou
+            logo.SetAbsolutePosition(35,720f); // X , -Y(com 0 ele fica na base da pagina)
+
+            //Inserindo uma imagem*/
+
+
             string dados = "";
 
             Paragraph paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 25, (int)System.Drawing.FontStyle.Bold));
@@ -219,9 +231,30 @@ namespace Academia_com_banco_de_dados
             paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, (int)System.Drawing.FontStyle.Italic);
             paragrafo2.Add(texto2+ "\n");
 
+            //Inserindo Tabela
+            PdfPTable tabela = new PdfPTable(3);//3Colunas
+            tabela.DefaultCell.FixedHeight = 20;
+
+            PdfPCell celula = new PdfPCell(new Phrase("Tabela de preço"));
+            celula.Colspan = 3; //Linha 1 mescleda
+            celula.Rotation = 90;
+            tabela.AddCell(celula);
+
+            tabela.AddCell("Arroz");
+            tabela.AddCell("Feijão");
+            tabela.AddCell("Batata");
+
+            tabela.AddCell("Mandioca");
+            tabela.AddCell("Jurubeba");
+            tabela.AddCell("Gatinho Feliz");
+
+            celula.Phrase.DefaultIfEmpty("")
+
+
             doc.Open();
             doc.Add(paragrafo1);
             doc.Add(paragrafo2);
+            doc.Add(logo);
             doc.Close();
 
 
