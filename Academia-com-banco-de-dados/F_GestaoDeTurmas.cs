@@ -227,18 +227,29 @@ namespace Academia_com_banco_de_dados
 
             paragrafo2.Alignment = Element.ALIGN_LEFT;
             paragrafo2.Add("Paragrago 2\n");            
-            string texto2 = "esse é o texto do segundo aparagrafo\n Loollllaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string texto2 = "esse é o texto do segundo aparagrafo\n Loollllaaaaaaaaaaaaaaaaaaaaaaaaaa.\n\n";
             paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, (int)System.Drawing.FontStyle.Italic);
             paragrafo2.Add(texto2+ "\n");
+
+
+
 
             //Inserindo Tabela
             PdfPTable tabela = new PdfPTable(3);//3Colunas
             tabela.DefaultCell.FixedHeight = 20;
 
-            PdfPCell celula = new PdfPCell(new Phrase("Tabela de preço"));
-            celula.Colspan = 3; //Linha 1 mescleda
-            celula.Rotation = 90;
-            tabela.AddCell(celula);
+            PdfPCell celula1 = new PdfPCell();
+            celula1.Colspan = 3; //Linha 1 mescleda
+            celula1.AddElement(logo);
+            // celula.Rotation = 90;
+             celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+            celula1.VerticalAlignment = Element.ALIGN_CENTER;
+            //  logo.Alignment = Element.ALIGN_LEFT;
+            celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+            
+            tabela.AddCell(celula1);
+
+
 
             tabela.AddCell("Arroz");
             tabela.AddCell("Feijão");
@@ -248,13 +259,20 @@ namespace Academia_com_banco_de_dados
             tabela.AddCell("Jurubeba");
             tabela.AddCell("Gatinho Feliz");
 
-            celula.Phrase.DefaultIfEmpty("")
+            PdfPCell celula2 = new PdfPCell(new Phrase("Tabela 2 AQUI!"));
+            celula2.Colspan = 3; //Linha 1 mescla
+            celula2.FixedHeight = 40;
+            celula2.Rotation = 0;
+            celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+            celula2.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tabela.AddCell(celula2);
 
 
             doc.Open();
             doc.Add(paragrafo1);
             doc.Add(paragrafo2);
             doc.Add(logo);
+            doc.Add(tabela);
             doc.Close();
 
 
