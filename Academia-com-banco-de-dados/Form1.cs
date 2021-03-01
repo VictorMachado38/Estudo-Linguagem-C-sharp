@@ -90,14 +90,8 @@ namespace Academia_com_banco_de_dados
 
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Globais.logado)
-            {
-                //Procedimentos
-            }
-            else
-            {
-                MessageBox.Show("É necessario ter um usuário logado");
-            }
+            F_NovoAluno f_NovoAluno = new F_NovoAluno();
+            abreForm(1, f_NovoAluno);
         }
 
         private void horáriosToolStripMenuItem_Click(object sender, EventArgs e)
