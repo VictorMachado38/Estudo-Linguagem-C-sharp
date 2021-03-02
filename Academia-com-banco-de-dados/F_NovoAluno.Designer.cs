@@ -231,6 +231,7 @@ namespace Academia_com_banco_de_dados
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "F_NovoAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Aluno";
             this.Load += new System.EventHandler(this.F_NovoAluno_Load);
             this.panel1.ResumeLayout(false);

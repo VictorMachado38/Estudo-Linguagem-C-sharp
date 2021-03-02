@@ -65,6 +65,7 @@ namespace Academia_com_banco_de_dados
             this.dgv_selecionarTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_selecionarTurma.Size = new System.Drawing.Size(776, 426);
             this.dgv_selecionarTurma.TabIndex = 0;
+            this.dgv_selecionarTurma.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_selecionarTurma_MouseDoubleClick);
             // 
             // F_SelecionarTurma
             // 
@@ -74,6 +75,7 @@ namespace Academia_com_banco_de_dados
             this.Controls.Add(this.dgv_selecionarTurma);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "F_SelecionarTurma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selecionar Turma";
             this.Load += new System.EventHandler(this.F_SelecionarTurma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_selecionarTurma)).EndInit();

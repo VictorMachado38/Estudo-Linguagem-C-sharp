@@ -43,6 +43,7 @@ namespace Academia_com_banco_de_dados
             cb_status.SelectedIndex = 0;
             tb_turma.Clear();
             tb_plano.Clear();
+            tb_turma.Clear();
             tb_nome.Focus();
             btn_gravar.Enabled = true;
             btn_cancelar.Enabled = true;
@@ -61,6 +62,7 @@ namespace Academia_com_banco_de_dados
             cb_status.SelectedIndex = 0;
             tb_turma.Clear();
             tb_plano.Clear();
+            tb_turma.Clear();
             tb_nome.Focus();
             btn_gravar.Enabled = false;
             btn_cancelar.Enabled = false;
@@ -82,6 +84,7 @@ namespace Academia_com_banco_de_dados
             cb_status.SelectedIndex = 0;
             tb_turma.Clear();
             tb_plano.Clear();
+            tb_turma.Clear();
             tb_nome.Focus();
             btn_gravar.Enabled = false;
             btn_cancelar.Enabled = false;
