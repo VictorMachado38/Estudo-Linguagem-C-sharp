@@ -114,5 +114,11 @@ namespace Academia_com_banco_de_dados
             F_GestaoDeTurmas f_GestaoDeTurmas = new F_GestaoDeTurmas();
             abreForm(3, f_GestaoDeTurmas);
         }
+
+        private void gestãoDeAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_GestaoDeAlunos f_GestaoDeAlunos = new F_GestaoDeAlunos();
+            abreForm(3, f_GestaoDeAlunos);
+        }
     }
 }
