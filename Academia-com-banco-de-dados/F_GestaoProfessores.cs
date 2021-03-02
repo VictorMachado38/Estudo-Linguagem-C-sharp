@@ -22,7 +22,7 @@ namespace Academia_com_banco_de_dados
             
             string vquery;
 
-            vquery = @"SELECT ID_PROFESSOR as 'ID Professor',T_NOMEPROFESSOR as 'Nome professor',T_TELEFONE as Telefone from tb_professores ORDER BY T_NOMEPROFESSOR DESC";
+            vquery = @"SELECT N_IDPROFESSOR as 'ID Professor',T_NOMEPROFESSOR as 'Nome professor',T_TELEFONE as Telefone from tb_professores ORDER BY T_NOMEPROFESSOR DESC";
             dgv_professores.DataSource = Banco.dql(vquery);
             dgv_professores.Columns[0].Width = 75;
             dgv_professores.Columns[1].Width = 254;
@@ -40,12 +40,12 @@ namespace Academia_com_banco_de_dados
                 String vid = dgv.SelectedRows[0].Cells[0].Value.ToString();
                 string vquery = @"
                             SELECT * FROM tb_professores
-                                    WHERE ID_PROFESSOR =                                       
+                                    WHERE N_IDPROFESSOR =                                       
                         " + vid;
                 //MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+vquery+vid);
                 dt = Banco.dql(vquery);
 
-                tb_idProfessores.Text = dt.Rows[0].Field<Int64>("ID_PROFESSOR").ToString();
+                tb_idProfessores.Text = dt.Rows[0].Field<Int64>("N_IDPROFESSOR").ToString();
                 tb_professores.Text = dt.Rows[0].Field<string>("T_NOMEPROFESSOR");
                 mtb_dscHoario.Text = dt.Rows[0].Field<string>("T_TELEFONE");
 
@@ -80,7 +80,7 @@ namespace Academia_com_banco_de_dados
                 //String vid = dgv.SelectedRows[0].Cells[0].Value.ToString();
                 string vquery = @"
                             DELETE  FROM tb_professores
-                                    WHERE ID_PROFESSOR =                                       
+                                    WHERE N_IDPROFESSOR =                                       
                         " + tb_idProfessores.Text;
                 //MessageBox.Show("A CONTULTA QUE VAI SR FEITA VAI SER ASSIM "+vquery+vid);
                 Banco.dql(vquery);
@@ -106,7 +106,7 @@ namespace Academia_com_banco_de_dados
             }
             else
             {
-                string vquery = @"UPDATE tb_professores SET T_NOMEPROFESSOR = '"+tb_professores.Text+"',T_TELEFONE = '"+mtb_dscHoario.Text+"'  WHERE ID_PROFESSOR = '"+tb_idProfessores.Text+"'";
+                string vquery = @"UPDATE tb_professores SET T_NOMEPROFESSOR = '"+tb_professores.Text+"',T_TELEFONE = '"+mtb_dscHoario.Text+ "'  WHERE N_IDPROFESSOR = '" + tb_idProfessores.Text+"'";
                 Banco.dql(vquery);
                 dgv_professores.DataSource = Banco.atualizaProfessor();
 

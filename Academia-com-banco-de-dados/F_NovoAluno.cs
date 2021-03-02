@@ -87,5 +87,13 @@ namespace Academia_com_banco_de_dados
             btn_cancelar.Enabled = false;
             btn_novo.Enabled = true;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            F_SelecionarTurma f_SelecionarTurma = new F_SelecionarTurma(this);
+            f_SelecionarTurma.ShowDialog();
+
+        }
     }
 }

@@ -35,11 +35,11 @@ namespace Academia_com_banco_de_dados
             dgv_turmas.Columns[2].Width = 120;
 
             //Popular professroes
-            string vqueryProfessores = @"SELECT ID_PROFESSOR,T_NOMEPROFESSOR FROM tb_professores ORDER BY ID_PROFESSOR";
+            string vqueryProfessores = @"SELECT N_IDPROFESSOR,T_NOMEPROFESSOR FROM tb_professores ORDER BY N_IDPROFESSOR";
             cb_professores.Items.Clear();
             cb_professores.DataSource = Banco.dql(vqueryProfessores);
             cb_professores.DisplayMember = "T_NOMEPROFESSOR";
-            cb_professores.ValueMember = "ID_PROFESSOR";
+            cb_professores.ValueMember = "N_IDPROFESSOR";
 
             //Popular ComboBox Status
             Dictionary<string, string> st = new Dictionary<string, string>();

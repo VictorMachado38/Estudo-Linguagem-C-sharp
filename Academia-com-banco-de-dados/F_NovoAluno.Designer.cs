@@ -200,6 +200,7 @@ namespace Academia_com_banco_de_dados
             this.button5.TabIndex = 4;
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -254,8 +255,8 @@ namespace Academia_com_banco_de_dados
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_gravar;
         private System.Windows.Forms.TextBox tb_plano;
-        private System.Windows.Forms.TextBox tb_turma;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.TextBox tb_turma;
     }
 }
