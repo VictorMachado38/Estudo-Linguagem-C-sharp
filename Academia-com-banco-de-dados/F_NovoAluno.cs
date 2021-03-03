@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Academia_com_banco_de_dados
 {
     public partial class F_NovoAluno : Form
     {
+        string origemCompleto = "";
+        string foto = "";
+        string pastaDestino = Globais.caminhoFoto;
+        string destinoCompleto = "";
         public F_NovoAluno()
         {
             InitializeComponent();
@@ -72,7 +77,33 @@ namespace Academia_com_banco_de_dados
 
         private void btn_gravar_Click(object sender, EventArgs e)
         {
-            string queryInsertAluno =String.Format(@"INSERT INTO tb_alunos (T_NOMEALUNO,T_TELEFONE,T_STATUS,N_IDTURMA) VALUES ('{0}','{1}','{2}',{3})",tb_nome.Text,mtb_telefone.Text,cb_status.SelectedValue,tb_turma.Tag.ToString());
+           if(destinoCompleto == "")
+            {
+                if(MessageBox.Show("Sem foto selecionada.","Quer continuar ?",MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    MessageBox.Show("Programa parado");
+                    return;
+                }
+
+            }
+           if(destinoCompleto != "")
+            {
+                System.IO.File.Copy(origemCompleto, destinoCompleto, true);
+                if (File.Exists(destinoCompleto))
+                {
+                    pb_foto.ImageLocation = destinoCompleto;
+                    // MessageBox.Show(destinoCompleto);
+                }
+                else
+                {
+                  if(  MessageBox.Show("Erro ao localizar a goto, deseja continuar ?", "ERRO",MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+            }
+                   
+            string queryInsertAluno =String.Format(@"INSERT INTO tb_alunos (T_NOMEALUNO,T_TELEFONE,T_STATUS,N_IDTURMA,T_FOTO) VALUES ('{0}','{1}','{2}',{3},'{4}')",tb_nome.Text,mtb_telefone.Text,cb_status.SelectedValue,tb_turma.Tag.ToString(),destinoCompleto);
             Banco.dml(queryInsertAluno);
             MessageBox.Show("Novo aluno inserido");
             
@@ -97,6 +128,42 @@ namespace Academia_com_banco_de_dados
             F_SelecionarTurma f_SelecionarTurma = new F_SelecionarTurma(this);
             f_SelecionarTurma.ShowDialog();
 
+        }
+
+        private void brn_addFoto_Click(object sender, EventArgs e)
+        {
+             origemCompleto = "";
+             foto = "";
+             pastaDestino = Globais.caminhoFoto;
+             destinoCompleto = "";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                origemCompleto = openFileDialog1.FileName;
+                foto = openFileDialog1.SafeFileName;
+                destinoCompleto = pastaDestino + foto;
+
+            }
+            if(File.Exists(destinoCompleto))
+            {
+                if(MessageBox.Show("Arquino ja existe, deseja sobrepor?","Substituir",MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+               
+            }
+            pb_foto.ImageLocation = origemCompleto;
+
+           /* System.IO.File.Copy(origemCompleto, destinoCompleto, true);
+            if (File.Exists(destinoCompleto))
+            {
+                pb_foto.ImageLocation = destinoCompleto;
+               // MessageBox.Show(destinoCompleto);
+            }
+            else
+            {
+                MessageBox.Show("Arquivo não copiado");
+            }*/
         }
     }
 }

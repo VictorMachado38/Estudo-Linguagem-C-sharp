@@ -47,7 +47,11 @@ namespace Academia_com_banco_de_dados
             this.tb_turma = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pb_foto = new System.Windows.Forms.PictureBox();
+            this.brn_addFoto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,9 +78,9 @@ namespace Academia_com_banco_de_dados
             this.panel1.Controls.Add(this.btn_gravar);
             this.panel1.Controls.Add(this.btn_novo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 246);
+            this.panel1.Location = new System.Drawing.Point(0, 212);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 32);
+            this.panel1.Size = new System.Drawing.Size(646, 32);
             this.panel1.TabIndex = 6;
             // 
             // btn_fechar
@@ -211,11 +215,38 @@ namespace Academia_com_banco_de_dados
             this.button6.Text = "...";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "JPG(*.jpg)|*.jpg|PNG(*.png)|*.png";
+            // 
+            // pb_foto
+            // 
+            this.pb_foto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pb_foto.Location = new System.Drawing.Point(525, 40);
+            this.pb_foto.Name = "pb_foto";
+            this.pb_foto.Size = new System.Drawing.Size(85, 113);
+            this.pb_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_foto.TabIndex = 56;
+            this.pb_foto.TabStop = false;
+            // 
+            // brn_addFoto
+            // 
+            this.brn_addFoto.Location = new System.Drawing.Point(525, 159);
+            this.brn_addFoto.Name = "brn_addFoto";
+            this.brn_addFoto.Size = new System.Drawing.Size(85, 23);
+            this.brn_addFoto.TabIndex = 57;
+            this.brn_addFoto.Text = "Add foto";
+            this.brn_addFoto.UseVisualStyleBackColor = true;
+            this.brn_addFoto.Click += new System.EventHandler(this.brn_addFoto_Click);
+            // 
             // F_NovoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 278);
+            this.ClientSize = new System.Drawing.Size(646, 244);
+            this.Controls.Add(this.brn_addFoto);
+            this.Controls.Add(this.pb_foto);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.tb_turma);
@@ -235,6 +266,7 @@ namespace Academia_com_banco_de_dados
             this.Text = "Novo Aluno";
             this.Load += new System.EventHandler(this.F_NovoAluno_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +291,8 @@ namespace Academia_com_banco_de_dados
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         public System.Windows.Forms.TextBox tb_turma;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pb_foto;
+        private System.Windows.Forms.Button brn_addFoto;
     }
 }

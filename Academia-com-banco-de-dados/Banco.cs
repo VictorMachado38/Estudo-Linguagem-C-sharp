@@ -281,9 +281,30 @@ namespace Academia_com_banco_de_dados
             acesso.dgv_professores.DataSource = Banco.dql(vquery);
         }
         */
+
+        public static DataTable atulizaGestaoAlunos()
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = ConexaoBanco().CreateCommand();
+                cmd.CommandText = @"SELECT N_IDALUNOS as 'ID',T_NOMEALUNO as 'Aluno' FROM tb_alunos ORDER BY T_NOMEALUNO";
+                da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+      
     }
-
-
 
 
 }

@@ -47,11 +47,11 @@ namespace Academia_com_banco_de_dados
             this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.cb_status = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_foto = new System.Windows.Forms.PictureBox();
             this.cb_turma = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_selecionarAluno)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_selecionarAluno
@@ -177,7 +177,7 @@ namespace Academia_com_banco_de_dados
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 375);
+            this.label5.Location = new System.Drawing.Point(336, 390);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 13);
             this.label5.TabIndex = 7;
@@ -215,13 +215,15 @@ namespace Academia_com_banco_de_dados
             this.button2.Text = "Imprimir Carterinha";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pb_foto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(339, 246);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 126);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pb_foto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pb_foto.Location = new System.Drawing.Point(339, 246);
+            this.pb_foto.Name = "pb_foto";
+            this.pb_foto.Size = new System.Drawing.Size(102, 136);
+            this.pb_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_foto.TabIndex = 11;
+            this.pb_foto.TabStop = false;
             // 
             // cb_turma
             // 
@@ -237,7 +239,7 @@ namespace Academia_com_banco_de_dados
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 448);
             this.Controls.Add(this.cb_turma);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_foto);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cb_status);
             this.Controls.Add(this.mtb_telefone);
@@ -256,7 +258,7 @@ namespace Academia_com_banco_de_dados
             this.Load += new System.EventHandler(this.F_GestaoDeAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_selecionarAluno)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,7 +281,7 @@ namespace Academia_com_banco_de_dados
         private System.Windows.Forms.MaskedTextBox mtb_telefone;
         private System.Windows.Forms.ComboBox cb_status;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_foto;
         private System.Windows.Forms.ComboBox cb_turma;
     }
 }
