@@ -1,6 +1,8 @@
 # Estudo-Linguagem-C-sharp
 ## Estudo-C#
 
+> Olá, 🖖 🧥 😸 🐒
+
 ### Aqui temos alguns progarmas 
 
 * **Academia-com-banco-de-dados**
@@ -10,5 +12,6 @@
 * **Componentes**
    * Aqui tempos implementações de varios componentes
 * **Estudo**
-   * Aqui temos um editor de texto, 
+   * Aqui temos um editor de texto, com tudo funcionando(copiar, colar, imprimir, salvar, abrir....)
 
+🖖 🧥  :zzz: :coffee: :100: :plate_with_cutlery: :fork_and_knife:
