@@ -120,5 +120,11 @@ namespace Academia_com_banco_de_dados
             F_GestaoDeAlunos f_GestaoDeAlunos = new F_GestaoDeAlunos();
             abreForm(3, f_GestaoDeAlunos);
         }
+
+        private void financeiroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Financeiro f_Financeiro = new F_Financeiro();
+            abreForm(3, f_Financeiro);
+        }
     }
 }
