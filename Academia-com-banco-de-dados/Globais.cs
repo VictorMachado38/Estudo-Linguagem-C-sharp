@@ -16,6 +16,6 @@ namespace Academia_com_banco_de_dados
         public static string nomaBanco="BD_Academia.db";
         public static string caminhoBanco = caminho+@"\banco\";
         public static string caminhoFoto = caminho+@"\fotos\";
-        s
+     
     }
 }
