@@ -297,5 +297,10 @@ namespace Academia_com_banco_de_dados
 
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

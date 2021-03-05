@@ -203,6 +203,7 @@ namespace Academia_com_banco_de_dados
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Horário";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // n_maxAlunos
             // 
