@@ -57,21 +57,8 @@ namespace Academia_com_banco_de_dados
 
         private void bancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Globais.logado)
-            {
-                if(Globais.nivel >= 2)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("É necessario quer nivel minimo 2");
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessario ter um usuário logado");
-            }
+            F_BancoDeDados f_BancoDeDados = new F_BancoDeDados();
+            abreForm(1, f_BancoDeDados);
         }
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)

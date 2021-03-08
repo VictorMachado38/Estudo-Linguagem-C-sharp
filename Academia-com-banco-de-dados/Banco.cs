@@ -290,7 +290,7 @@ namespace Academia_com_banco_de_dados
             {
                 var vcon = ConexaoBanco();
                 var cmd = ConexaoBanco().CreateCommand();
-                cmd.CommandText = @"SELECT N_IDALUNOS as 'ID',T_NOMEALUNO as 'Aluno' FROM tb_alunos ORDER BY T_NOMEALUNO";
+                cmd.CommandText = @"SELECT N_IDALUNOS as 'ID',T_NOMEALUNO as 'Aluno' FROM tb_alunos ORDER BY T_NOMEALUNO DESC";
                 da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
                 da.Fill(dt);
                 vcon.Close();
